@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BlogButton } from './blog-button/blog-button.component';
+import { posts } from './list-of-posts.json';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { BlogButton } from './blog-button/blog-button.component';
 })
 export class BlogMainComponent {
   title = 'basic-blog';
-  name = 'bill'
+  name = 'the Button Blog'
   buttonIsLive = true;
+  listOfPosts = posts;
 }
