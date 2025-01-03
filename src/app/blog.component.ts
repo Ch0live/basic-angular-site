@@ -1,14 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BlogButton } from './blog-button/blog-button.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, BlogButton],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class AppComponent {
+export class BlogMainComponent {
   title = 'basic-blog';
   name = 'bill'
-  nameFromSignal = signal('jerry')
+  buttonIsLive = true;
 }
