@@ -11,7 +11,15 @@
       <p>
         {{ post.body }}
       </p>
-      <img [src]="imagePath" alt="Hokkaido mountain range">
+      <div class="img-container">
+        <img 
+          [src]="imagePath" 
+          [style]="appendedImgStyling"
+          (mouseover)="growImage()" 
+          (mouseout)="ungrowImage()"  
+          alt="Hokkaido mountain range" 
+        >
+      </div>
     }
   </div>
 </main>

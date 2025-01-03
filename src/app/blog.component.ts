@@ -15,4 +15,17 @@ export class BlogMainComponent {
   buttonIsLive = true;
   listOfPosts = posts;
   imagePath = 'assets/hokkaido.png';
+
+  // Grow image on hover
+  appendedImgStyling: string = '';
+
+  growImage() {
+    console.log("grow image")
+    this.appendedImgStyling = 'transform: scale(1.05); transition: transform 0.1s ease-in-out;';
+  }
+
+  ungrowImage() {
+    console.log("shrink image")
+    this.appendedImgStyling = 'transform: scale(1); transition: transform 0.1s ease-in-out;';
+  }
 }
