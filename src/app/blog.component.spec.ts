@@ -20,10 +20,17 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('basic-blog');
   });
 
-  it('should render title', () => {
+  it('should render heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, basic-blog');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Heading');
+  });
+
+  it('should render paragraph', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('p')?.textContent).toContain('Paragraph');
   });
 });
