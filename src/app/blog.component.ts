@@ -14,4 +14,5 @@ export class BlogMainComponent {
   name = 'the Button Blog'
   buttonIsLive = true;
   listOfPosts = posts;
+  imagePath = 'assets/hokkaido.png';
 }
