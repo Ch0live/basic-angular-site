@@ -1,27 +1,6 @@
 <main class="main">
-  <div class="content">
     <h1>
       {{name}}
     </h1>
-    @if (buttonIsLive) {<blog-button />} @else {<p>button is currently unavailable</p>}
-    @for (post of listOfPosts; track post) {
-      <h2>
-        {{ post.heading }}
-      </h2>
-      <p>
-        {{ post.body }}
-      </p>
-      <div class="img-container">
-        <img 
-          [src]="imagePath" 
-          [style]="appendedImgStyling"
-          (mouseover)="growImage()" 
-          (mouseout)="ungrowImage()"  
-          alt="Hokkaido mountain range" 
-        >
-      </div>
-    }
-  </div>
+    <blog-content />
 </main>
-
-<router-outlet />
