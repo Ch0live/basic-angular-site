@@ -1,8 +1,5 @@
 
-<div class="content">
-  <p>
-    Hello!
-  </p>
+<div class="main">
   @if (buttonIsLive) {<blog-button />} @else {<p>button is currently unavailable</p>}
   @for (post of listOfPosts; track post) {
     <h2>
