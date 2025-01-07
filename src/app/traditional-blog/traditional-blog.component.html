@@ -2,8 +2,12 @@
     Welcome!
 </h2>
 <p>
-    I hope you find something you'll enjoy reading
+    I hope you find something you'll enjoy reading!
 </p>
 <nav>
-    <a routerLink="blog-content">Example blog content</a>
+    <ul>
+    @for (post of listOfPosts; track post) {
+        <li><a routerLink="blog-content"> {{ post.heading }}</a></li>
+    }
+    </ul>
 </nav>
