@@ -1,4 +1,4 @@
-import { Component, computed, effect, signal } from '@angular/core';
+import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'blog-muck-about-area',
@@ -14,10 +14,9 @@ import { Component, computed, effect, signal } from '@angular/core';
       <h3>
         Log of events:
       </h3>
-      <span>
-        {{ logOfEvents }}
-      </span>
-
+      <p>
+        {{ logOfEvents() }}
+      </p>
     </div>
     `,
   styleUrl: './muck-about-area.component.css'
@@ -26,11 +25,11 @@ export class MuckAboutAreaComponent {
   readonly count = signal(0)
   readonly doubleCount = computed(() => this.count() * 2);
   readonly powerCount = computed(() => this.count() ** 2);
-  logOfEvents: string[] = [];
+  readonly logOfEvents: WritableSignal<string[]> = signal([]);
 
   constructor() {
     effect(() => {
-      this.logOfEvents.push(this.computeCountLog())
+      this.logOfEvents.update(oldLog => [...oldLog, this.computeCountLog()]);
     });
   }
 
