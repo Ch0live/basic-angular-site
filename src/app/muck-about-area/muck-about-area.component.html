@@ -1,4 +1,9 @@
 <div class="main">
     <h2>User occupation: {{occupation}}</h2>
     <blog-child (incrementCountEvent)="addOne($event)" />
+    <zippy (open)="uponOpen($event)" (close)="uponClose($event)">
+        <span>
+            Peek-a-boo
+        </span>
+    </zippy>
 </div>
