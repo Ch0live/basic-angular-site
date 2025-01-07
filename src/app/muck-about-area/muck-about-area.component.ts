@@ -26,7 +26,13 @@ export class MuckAboutAreaComponent {
   readonly count = signal(0)
   readonly doubleCount = computed(() => this.count() * 2);
   readonly powerCount = computed(() => this.count() ** 2);
-  logOfEvents: string[] = [ this.computeCountLog() ];
+  logOfEvents: string[] = [];
+
+  constructor() {
+    effect(() => {
+      this.logOfEvents.push(this.computeCountLog())
+    });
+  }
 
   onAlphaClick() {
     this.count.update(() => this.count() + 1);
@@ -40,7 +46,3 @@ export class MuckAboutAreaComponent {
     return `count: ${this.count} doubleCount: ${this.doubleCount} powerCount: ${this.powerCount}`;
   }
 }
-
-effect(() => {
-  console.log(`The current count is: ${count()}`);
-});
