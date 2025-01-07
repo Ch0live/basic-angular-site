@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, Signal, signal } from '@angular/core';
 
 @Component({
   selector: 'blog-muck-about-area',
@@ -22,9 +22,8 @@ export class MuckAboutAreaComponent {
     // Set a signal
     this.count.set(3);
     this.label = this.label + " count.set(3): " + String(this.count)
-
-    // Increment signal
-    this.count.update(value => value + 1)
-    this.label = this.label + " count.update(value => value + 1): " + String(this.count)
+    
+    const doubleCount: Signal<number> = computed(() => this.count() * 2);
+    this.label = this.label + " doubleCount: " + doubleCount
   }
 }
