@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogButton } from '../blog-button/blog-button.component';
-import { posts } from '../list-of-posts.json';
+import { posts } from '../../list-of-posts.json';
 
 @Component({
   selector: 'blog-content',
