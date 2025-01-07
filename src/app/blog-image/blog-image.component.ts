@@ -11,8 +11,10 @@ import { BlogImageService } from './blog-image.service';
 export class ImageWrapperComponent {
   src = "../../assets/hokkaido.png";
   alt = "../../assets/hokkaido.png";
+  imageNames: string;
 
-  imageService = inject(BlogImageService);
+  constructor(private imageService: BlogImageService) {
+    this.imageNames = this.imageService.getAllImages().join(", ");
+  }
 
-  imageNames = this.imageService.getAllImages();
 }
