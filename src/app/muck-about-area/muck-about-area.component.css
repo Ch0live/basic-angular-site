@@ -1,4 +1,7 @@
 .main {
     background-color: darkviolet;
     padding: 20px;
+    margin: 20px;
+    border: 4px solid white;
+    border-radius: 20px;
 }
