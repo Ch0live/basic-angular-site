@@ -15,7 +15,9 @@ import { Component, computed, effect, signal, WritableSignal } from '@angular/co
         Log of events:
       </h3>
       <ul>
-        {{ logOfEvents() }}
+        @for (log of logOfEvents(); track log) {
+          <li>{{ log }}</li>
+        }
       </ul>
     </div>
     `,
@@ -25,7 +27,7 @@ export class MuckAboutAreaComponent {
   readonly count = signal(0)
   readonly doubleCount = computed(() => this.count() * 2);
   readonly powerCount = computed(() => this.count() ** 2);
-  readonly logOfEvents: WritableSignal<HTMLUListElement> = signal([]);
+  readonly logOfEvents: WritableSignal<string[]> = signal([]);
 
   constructor() {
     effect(() => {
@@ -41,9 +43,7 @@ export class MuckAboutAreaComponent {
     this.count.update(() => this.count() - 1);
   }
 
-  computeCountLog(): HTMLUListElement {
-    const row = `count: ${this.count} doubleCount: ${this.doubleCount} powerCount: ${this.powerCount}`;
-    const li = document.createElement(`li`).textContent(row);
-    return li
+  computeCountLog(): string {
+    return `count: ${this.count} doubleCount: ${this.doubleCount} powerCount: ${this.powerCount}`;
   }
 }
