@@ -3,5 +3,14 @@
       {{title}}
     </h1>
     <blog-muck-about-area occupation="Dev" />
-    <blog-content />
+      <nav>
+        <p>
+          <a routerLink="/">Home</a>
+          - 
+          <a routerLink="/button-blog">The Button</a>
+          - 
+          <a routerLink="/blog">Blog</a>
+        </p>
+      </nav>
+      <router-outlet />
 </main>
