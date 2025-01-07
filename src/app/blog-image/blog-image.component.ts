@@ -1,11 +1,12 @@
 
 import { NgOptimizedImage } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { BlogImageService } from './blog-image.service';
+import {UpperCasePipe} from '@angular/common';
 
 @Component({
   selector: 'blog-image',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, UpperCasePipe],
   templateUrl: './blog-image.component.html'
 })
 export class ImageWrapperComponent {
