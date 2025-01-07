@@ -2,20 +2,33 @@
 <div class="main">
   @if (buttonIsLive) {<blog-button />} @else {<p>button is currently unavailable</p>}
   @for (post of listOfPosts; track post) {
-    <h2>
-      {{ post.heading }}
-    </h2>
-    <p>
-      {{ post.body }}
-    </p>
-    <div class="img-container">
-      <img 
-        [src]="imagePath" 
-        [style]="appendedImgStyling"
-        (mouseover)="growImage()" 
-        (mouseout)="ungrowImage()"  
-        alt="Hokkaido mountain range" 
-      >
-    </div>
+    <!-- @defer here applies to all posts at the same time. TODO: Adjust to only load what's actually visible -->
+    @defer (on viewport) {
+      <article>
+        <h2>
+          {{ post.heading }}
+        </h2>
+        <p>
+          {{ post.body }}
+        </p>
+        <div class="img-container">
+          <img 
+            [src]="imagePath" 
+            [style]="appendedImgStyling"
+            (mouseover)="growImage()" 
+            (mouseout)="ungrowImage()"  
+            alt="Hokkaido mountain range" 
+          >
+        </div>
+      </article>
+    } @placeholder {
+      <p>
+        <i>image placeholder</i>
+      </p>
+    } @loading (minimum 1s) {
+      <p>
+        <i>loading article...</i>
+      </p>
+    }
   }
 </div>

@@ -3,8 +3,8 @@ import { Component, EventEmitter, Output } from "@angular/core";
 @Component({
     selector: 'zippy',
     template: `
-    <div style="width: 200px; height: 50px; font-size: 2em;">
-      <div (click)="toggle()">Toggle</div>
+    <div>
+      <button style="width: 200px; height: 50px; font-size: 2em;" (click)="toggle()">Toggle</button>
       <div [hidden]="!visible">
         <ng-content></ng-content>
       </div>
