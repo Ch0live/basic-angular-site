@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { MuckAboutAreaComponent } from "./muck-about-area/muck-about-area.component";
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'blog',
-  imports: [MuckAboutAreaComponent, RouterLink, RouterOutlet],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })

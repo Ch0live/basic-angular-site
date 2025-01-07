@@ -1,6 +1,5 @@
 
 <div class="main">
-  @if (buttonIsLive) {<blog-button />} @else {<p>button is currently unavailable</p>}
   @for (post of listOfPosts; track post) {
     <!-- @defer here applies to all posts at the same time. TODO: Adjust to only load what's actually visible -->
     @defer (on viewport) {

@@ -6,6 +6,7 @@ import { Component, signal } from '@angular/core';
 })
 export class BlogButton {
   getNextParagraph = signal(false);
+  buttonIsLive = false;
   colourOfButton = "red"
   greet() {
     console.log('Hello there 👋');

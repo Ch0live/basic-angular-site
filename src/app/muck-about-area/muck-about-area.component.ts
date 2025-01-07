@@ -1,5 +1,4 @@
 import { Component, Input, output, Output, OutputEmitterRef, signal } from '@angular/core';
-import { EventEmitter } from 'stream';
 import { ChildComponent } from "./child/child.component";
 import { Zippy } from "./zippy/zippy.component";
 import { NgOptimizedImage } from '@angular/common';

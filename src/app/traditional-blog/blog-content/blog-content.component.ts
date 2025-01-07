@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { BlogButton } from '../blog-button/blog-button.component';
 import { posts } from '../../list-of-posts.json';
 
 @Component({
   selector: 'blog-content',
-  imports: [BlogButton],
+  imports: [],
   templateUrl: './blog-content.component.html',
   styleUrl: './blog-content.component.css'
 })
 export class BlogContent {
   title = 'basic-blog';
   name = 'the Button Blog'
-  buttonIsLive = true;
   listOfPosts = posts;
   imagePath = 'assets/hokkaido.png';
 

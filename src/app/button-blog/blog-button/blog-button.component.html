@@ -1,1 +1,4 @@
-<button [disabled]="getNextParagraph()" (click)="greet()">Tell me more</button>
+<div>
+    <button [disabled]="getNextParagraph()" (click)="greet()">Tell me more</button>
+    @if (buttonIsLive) {<blog-button />} @else {<p>button is currently unavailable</p>}
+</div>
