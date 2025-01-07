@@ -7,6 +7,4 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class Blog {
-  title = 'Angular Blog Site';
-}
+export class Blog {}

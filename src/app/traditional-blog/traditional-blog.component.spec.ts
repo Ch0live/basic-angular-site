@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MuckAboutArea } from './muck-about-area.component';
+import { TraditionalBlog } from './traditional-blog.component';
 
-describe('MuckAboutArea', () => {
-  let component: MuckAboutArea;
-  let fixture: ComponentFixture<MuckAboutArea>;
+describe('TraditionalBlog', () => {
+  let component: TraditionalBlog;
+  let fixture: ComponentFixture<TraditionalBlog>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MuckAboutArea]
+      imports: [TraditionalBlog]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MuckAboutArea);
+    fixture = TestBed.createComponent(TraditionalBlog);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

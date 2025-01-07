@@ -23,17 +23,14 @@ import { Component, computed, effect, signal, WritableSignal } from '@angular/co
     `,
   styleUrl: './muck-about-area.component.css'
 })
-export class MuckAboutAreaComponent {
+export class MuckAboutArea {
   readonly count = signal(0)
   readonly doubleCount = computed(() => this.count() * 2);
   readonly powerCount = computed(() => this.count() ** 2);
   readonly logOfEvents: WritableSignal<string[]> = signal([]);
-
-  constructor() {
-    effect(() => {
+  private loggingEffect = effect(() => {
       this.logOfEvents.update(oldLog => [...oldLog, this.computeCountLog()]);
-    });
-  }
+  });
 
   onAlphaClick() {
     this.count.update(() => this.count() + 1);

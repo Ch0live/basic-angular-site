@@ -5,9 +5,11 @@ import { Component } from "@angular/core";
   selector: 'home',
   imports: [], 
   template: `
-    <h2>Yet another angular blog</h2>
-    <p>Welcome to this Angular Blog!</p>
-    <p>Use the nav bar at the top to navigate to either formats</p>
+    <h2>Hello there</h2>
+    <p>
+      Welcome to this corner of the internet. 
+      This is a blog with some other experimental pages. 
+    </p>
   `
 })
 export class Home {}

@@ -1,15 +1,12 @@
 <main class="main">
-    <h1>
-      {{title}}
-    </h1>
-      <nav>
-          <a routerLink="/">Home</a>
-          - 
-          <a routerLink="/muck-about-area">Muck-about Area</a>
-          - 
-          <a routerLink="/button-blog">The Button</a>
-          - 
-          <a routerLink="/blog">Blog</a>
-      </nav>
-      <router-outlet />
+  <nav>
+      <a routerLink="/">Home</a>
+      - 
+      <a routerLink="/button-blog">The Button</a>
+      - 
+      <a routerLink="/blog">Blog</a>
+      - 
+      <a routerLink="/muck-about-area" style="color: lightcoral;">The Muck-About Area (experimental)</a>
+  </nav>
+  <router-outlet />
 </main>
