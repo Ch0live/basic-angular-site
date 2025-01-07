@@ -8,7 +8,7 @@ import { Component, computed, Signal, signal } from '@angular/core';
       <h2>Signals</h2>
       <button (click)="onClick()">Run</button>
       <p>
-          {{ label }}
+          {{ count() }}<br>{{ doubleCount() }}<br>{{ powerCount() }}
       </p>
     </div>
     `,
@@ -16,14 +16,11 @@ import { Component, computed, Signal, signal } from '@angular/core';
 })
 export class MuckAboutAreaComponent {
   readonly count = signal(0)
-  label: string = "signal(0): " + String(this.count)
+  readonly doubleCount = computed(() => this.count() * 2);
+  readonly powerCount = computed(() => this.count() ** 2);
 
   onClick() {
     // Set a signal
-    this.count.set(3);
-    this.label = this.label + " count.set(3): " + String(this.count)
-    
-    const doubleCount: Signal<number> = computed(() => this.count() * 2);
-    this.label = this.label + " doubleCount: " + doubleCount
+    this.count.update(() => this.count() + 1);
   }
 }
