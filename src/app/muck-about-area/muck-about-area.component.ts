@@ -1,11 +1,11 @@
 import { Component, Input, output, Output, OutputEmitterRef, signal } from '@angular/core';
 import { ChildComponent } from "./child/child.component";
 import { Zippy } from "./zippy/zippy.component";
-import { NgOptimizedImage } from '@angular/common';
+import { ImageWrapperComponent } from "../blog-image/blog-image.component";
 
 @Component({
   selector: 'blog-muck-about-area',
-  imports: [ChildComponent, Zippy, NgOptimizedImage],
+  imports: [ChildComponent, Zippy, ImageWrapperComponent],
   templateUrl: './muck-about-area.component.html',
   styleUrl: './muck-about-area.component.css'
 })
