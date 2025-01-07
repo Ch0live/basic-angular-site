@@ -1,6 +1,7 @@
 
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { BlogImageService } from './blog-image.service';
 
 @Component({
   selector: 'blog-image',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
   templateUrl: './blog-image.component.html'
 })
 export class ImageWrapperComponent {
-  src = "../../assets/hokkaido.png"
-  alt = "../../assets/hokkaido.png"
+  src = "../../assets/hokkaido.png";
+  alt = "../../assets/hokkaido.png";
+
+  imageService = inject(BlogImageService);
+
+  imageNames = this.imageService.getAllImages();
 }
