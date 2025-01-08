@@ -1,0 +1,19 @@
+{
+    "staticPostList": [
+      {
+        "path": "cape-may-beach-day",
+        "heading": "Cape May Beach Day",
+        "date": "20th June 2024"
+      },
+      {
+        "path": "the-narrows",
+        "heading": "The Narrows in Zion",
+        "date": "1st Jan 2024"
+      },
+      {
+        "path": "the-rockies",
+        "heading": "Rocky Mountain National Park",
+        "date": "1st Jan 2024"
+      }
+    ]
+  }

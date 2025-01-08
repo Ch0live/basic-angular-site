@@ -1,20 +1,7 @@
 <article>
     <p>
-        <i> {{ post.date }} </i>
+        <i> {{ postMetadata.date }} </i>
     </p>
-    <h2>
-        {{ post.heading }}
-    </h2>
-    <p>
-        {{ post.body }}
-    </p>
-    <div class="img-container">
-        <img 
-        [src]="post.image" 
-        [style]="appendedImgStyling"
-        (mouseover)="growImage()" 
-        (mouseout)="ungrowImage()"  
-        alt="Hokkaido mountain range" 
-        >
-    </div>
+    <div [innerHTML]="postHtml"></div>
+    <!-- add link back -->
 </article>

@@ -30,8 +30,8 @@ export const routes: Routes = [
                 component: TraditionalBlog
             },
             {
-                path: 'the-grand-canyon', 
-                title: 'Grand Canyon', 
+                path: 'cape-may-beach-day', 
+                title: 'Cape May', 
                 component: Article
             },
             {

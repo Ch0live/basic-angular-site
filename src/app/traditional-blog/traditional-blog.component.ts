@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { postsList } from '../content/list-of-posts.json';
+import { staticPostList } from '../content/list-of-static-posts.json';
 
 @Component({
   selector: 'blog-traditional-blog',
@@ -9,5 +9,5 @@ import { postsList } from '../content/list-of-posts.json';
   styleUrl: 'traditional-blog.component.css'
 })
 export class TraditionalBlog {
-  listOfPosts = postsList
+  listOfPosts = staticPostList
 }
