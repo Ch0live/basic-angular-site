@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'button[nextpage]',
-  template: '<ng-content></ng-content>', 
-  styleUrl: './blog-button.component.css'
+  selector: 'blog-button-blog',
+  imports: [],
+  templateUrl: './button-blog.component.html',
+  styleUrl: './button-blog.component.css'
 })
-export class BlogButton {
+export class ButtonBlog {
   greeting: string = ""
   greet() {
     console.log('Hello there 👋');

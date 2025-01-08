@@ -43,3 +43,20 @@ ol {
 img {
     width: 80%;
 }
+
+button[nextpage] {
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px; 
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+button[nextpage]:hover {
+  background-color: #1f1f1f;
+}
