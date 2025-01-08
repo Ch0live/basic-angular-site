@@ -9,6 +9,11 @@ import { Article as Article } from './article/article.component';
 export const routes: Routes = [
     {
         path: '', 
+        redirectTo: '/home', 
+        pathMatch: 'full'
+    },
+    {
+        path: 'home', 
         title: 'Welcome!', 
         component: Home
     },
