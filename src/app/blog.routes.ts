@@ -24,9 +24,12 @@ export const routes: Routes = [
     },
     {
         path: 'blog', 
-        title: 'Bl0live', 
-        component: TraditionalBlog, 
         children: [
+            {
+                path: '', 
+                title: 'Bl0live', 
+                component: TraditionalBlog
+            },
             {
                 path: 'the-grand-canyon', 
                 title: 'Grand Canyon', 
@@ -38,7 +41,7 @@ export const routes: Routes = [
                 component: Article
             },
             {
-                path: 'the-rockies', 
+                path: 'the-rockies',  
                 title: 'Rockies', 
                 component: Article
             },
