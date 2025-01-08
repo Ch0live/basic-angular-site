@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { ImageWrapperComponent } from '../blog-image/blog-image.component';
+import { Post } from './post.type'
+import { ActivatedRoute } from '@angular/router';
+import { GetArticleService } from './get-article.service';
 
+// TODO: Decide data structure for static articles so ArticleComponent can generate properly
 @Component({
   selector: 'blog-article',
   imports: [ImageWrapperComponent],
@@ -9,20 +12,13 @@ import { ImageWrapperComponent } from '../blog-image/blog-image.component';
   styleUrl: 'article.component.css'
 })
 export class Article {
-  url: string = '';
-  date: string = '';
-  heading: string = '';
-  imagePath: string = '';
+  path: string;
+  post: Post;
 
-  constructor() {
-    this.url = "the-grand-canyon"
-    console.log(this.url)
-    this.date = "1st of Jan, 2024"
-    this.heading = "Hello!"
-    this.imagePath = "../../assets/hokkaido.png"
+  constructor(private activatedRoute: ActivatedRoute) {
+    this.path = this.activatedRoute.snapshot.url[0].path;
+    this.post = new GetArticleService().getByPath(this.path);
   }
-
-// TODO: Decide data structure for static articles so ArticleComponent can generate properly
 
   appendedImgStyling: string = '';
 

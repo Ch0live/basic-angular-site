@@ -1,20 +1,20 @@
 {
-    "posts": [
+    "postsList": [
       {
-        "heading": "The Grand Canyon",
         "path": "the-grand-canyon", 
-        "name": "cape-may-beach-day",
-        "date": "20th June 2024"
-      },
-      {
-        "heading": "The Narrows, Zion",
-        "path": "the-narrows", 
+        "heading": "The Grand Canyon",
         "body": "The Narrows is a stunning slot canyon in Zion National Park, Utah. The hike involves wading through the Virgin River, surrounded by towering cliffs, making it a challenging and exhilarating adventure for hikers.", 
         "image": "zion-national-park.png"
       },
       {
-        "heading": "The Rockies",
+        "path": "the-narrows", 
+        "heading": "The Narrows, Zion",
+        "body": "The Narrows is a stunning slot canyon in Zion National Park, Utah. The hike involves wading through the Virgin River, surrounded by towering cliffs, making it a challenging and exhilarating adventure for hikers.", 
+        "image": "zion-national-park.png"
+      },
+      {
         "path": "the-rockies", 
+        "heading": "The Rockies",
         "body": "Rocky Mountain National Park, located in Colorado, offers spectacular alpine scenery with towering peaks, deep valleys, and pristine lakes. It's a popular destination for hiking, wildlife viewing, and exploring the natural beauty of the Rocky Mountains.", 
         "image": "rocky-mountain-national-park.png"
       }

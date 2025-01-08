@@ -1,13 +1,16 @@
 <article>
-    <p>
+    <!-- <p>
         <i> {{ date }} </i>
-    </p>
+    </p> -->
     <h2>
-        {{ heading }}
+        {{ post.heading }}
     </h2>
+    <p>
+        {{ post.body }}
+    </p>
     <div class="img-container">
         <img 
-        [src]="imagePath" 
+        [src]="post.image" 
         [style]="appendedImgStyling"
         (mouseover)="growImage()" 
         (mouseout)="ungrowImage()"  
