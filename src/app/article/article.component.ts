@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { ImageWrapperComponent } from '../blog-image/blog-image.component';
 import { posts } from '../list-of-posts.json';
-import { BlogContent } from '../traditional-blog/blog-content/blog-content.component';
 
 @Component({
   selector: 'blog-article',
-  imports: [ImageWrapperComponent, BlogContent],
+  imports: [ImageWrapperComponent],
   templateUrl: 'article.component.html',
   styleUrl: 'article.component.css'
 })

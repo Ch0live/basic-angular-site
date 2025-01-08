@@ -10,7 +10,7 @@ import { SpacedText } from './spaced-text.pipe';
   imports: [NgOptimizedImage, UpperCasePipe, SpacedText],
   templateUrl: 'blog-image.component.html'
 })
-export class ImageWrapperComponent {
+export class ImageWrapperComponent { //TODO: Turn into attribute selector
   src = "../../assets/hokkaido.png";
   alt = "../../assets/hokkaido.png";
   imageNames: string;
