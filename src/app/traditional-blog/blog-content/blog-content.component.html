@@ -1,24 +1,23 @@
 
 <div class="main">
   @for (post of listOfPosts; track post) {
-    <!-- @defer here applies to all posts at the same time. TODO: Adjust to only load what's actually visible -->
-    @defer (on viewport) {
-      <article>
-        <h2>
-          {{ post.heading }}
-        </h2>
-        <p>
-          {{ post.body }}
-        </p>
-        <div class="img-container">
-          <img 
-            [src]="imagePath" 
-            [style]="appendedImgStyling"
-            (mouseover)="growImage()" 
-            (mouseout)="ungrowImage()"  
-            alt="Hokkaido mountain range" 
-          >
-        </div>
-      </article>
+    <!-- TODO: Adjust to only load what's actually visible using @defer -->
+    <article>
+      <h2>
+        {{ post.heading }}
+      </h2>
+      <p>
+        {{ post.body }}
+      </p>
+      <div class="img-container">
+        <img 
+          [src]="imagePath" 
+          [style]="appendedImgStyling"
+          (mouseover)="growImage()" 
+          (mouseout)="ungrowImage()"  
+          alt="Hokkaido mountain range" 
+        >
+      </div>
+    </article>
   }
 </div>

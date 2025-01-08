@@ -9,7 +9,7 @@ import { posts } from '../../list-of-posts.json';
 })
 export class BlogContent {
   title = 'basic-blog';
-  name = 'the Button Blog'
+  name = 'blog'
   listOfPosts = posts;
   imagePath = 'assets/hokkaido.png';
 

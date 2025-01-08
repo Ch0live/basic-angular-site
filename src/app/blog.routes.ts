@@ -4,8 +4,9 @@ import { BlogButton as TheButton } from './button-blog/blog-button/blog-button.c
 import { MuckAboutArea as MuckAboutArea } from './muck-about-area/muck-about-area.component';
 import { TraditionalBlog as TraditionalBlog } from './traditional-blog/traditional-blog.component';
 import { BlogContent } from './traditional-blog/blog-content/blog-content.component';
+import listOfPosts from './list-of-posts.json' // TODO: Pull path from json
 
-const mainRoutes: Routes = [
+export const routes: Routes = [
     {
         path: '', 
         title: 'Welcome!', 
@@ -19,7 +20,24 @@ const mainRoutes: Routes = [
     {
         path: 'blog', 
         title: 'Bl0live', 
-        component: TraditionalBlog
+        component: TraditionalBlog, 
+        children: [
+            {
+                path: 'the-grand-canyon', 
+                title: 'Grand Canyon', 
+                component: BlogContent
+            },
+            {
+                path: 'the-narrows', 
+                title: 'Zion', 
+                component: BlogContent
+            },
+            {
+                path: 'the-rockies', 
+                title: 'Rockies', 
+                component: BlogContent
+            },
+        ]
     },
     {
         path: 'button-blog', 
@@ -27,13 +45,3 @@ const mainRoutes: Routes = [
         component: TheButton
     }
 ];
-
-const blogRoutes: Routes = [
-    {
-        path: 'blog/blog-content', 
-        title: 'First article', 
-        component: BlogContent
-    }
-];
-
-export const routes: Routes = [...mainRoutes, ...blogRoutes]

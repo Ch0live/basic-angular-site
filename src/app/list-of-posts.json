@@ -2,16 +2,19 @@
     "posts": [
       {
         "heading": "The Grand Canyon",
+        "path": "the-grand-canyon", 
         "body": "The Grand Canyon is a massive canyon carved by the Colorado River in Arizona, USA. It is known for its immense size, colorful rock formations, and breathtaking vistas, making it one of the most popular natural attractions in the world.", 
         "image": "the-grand-canyon.png"
       },
       {
         "heading": "The Narrows, Zion",
+        "path": "the-narrows", 
         "body": "The Narrows is a stunning slot canyon in Zion National Park, Utah. The hike involves wading through the Virgin River, surrounded by towering cliffs, making it a challenging and exhilarating adventure for hikers.", 
         "image": "zion-national-park.png"
       },
       {
         "heading": "The Rockies",
+        "path": "the-rockies", 
         "body": "Rocky Mountain National Park, located in Colorado, offers spectacular alpine scenery with towering peaks, deep valleys, and pristine lakes. It's a popular destination for hiking, wildlife viewing, and exploring the natural beauty of the Rocky Mountains.", 
         "image": "rocky-mountain-national-park.png"
       }
