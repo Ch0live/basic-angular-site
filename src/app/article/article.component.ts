@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ImageWrapperComponent } from '../blog-image/blog-image.component';
-import { posts } from '../list-of-posts.json';
 
 @Component({
   selector: 'blog-article',
@@ -9,9 +9,22 @@ import { posts } from '../list-of-posts.json';
   styleUrl: 'article.component.css'
 })
 export class Article {
+  url: string = '';
+  date: string = '';
+  heading: string = '';
+  imagePath: string = '';
+
+  constructor() {
+    this.url = "the-grand-canyon"
+    console.log(this.url)
+    this.date = "1st of Jan, 2024"
+    this.heading = "Hello!"
+    this.imagePath = "../../assets/hokkaido.png"
+  }
+
+// TODO: Decide data structure for static articles so ArticleComponent can generate properly
+
   appendedImgStyling: string = '';
-  listOfPosts = posts;
-  imagePath = 'assets/hokkaido.png';
 
   growImage() {
     console.log("grow image")

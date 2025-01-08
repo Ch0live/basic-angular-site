@@ -1,7 +1,6 @@
 
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { BlogImageService } from './blog-image.service';
 import {UpperCasePipe} from '@angular/common';
 import { SpacedText } from './spaced-text.pipe';
 
@@ -13,10 +12,5 @@ import { SpacedText } from './spaced-text.pipe';
 export class ImageWrapperComponent { //TODO: Turn into attribute selector
   src = "../../assets/hokkaido.png";
   alt = "../../assets/hokkaido.png";
-  imageNames: string;
-
-  constructor(private imageService: BlogImageService) {
-    this.imageNames = this.imageService.getAllImages().join(", ");
-  }
-
+  imageNames = "imageNames"
 }

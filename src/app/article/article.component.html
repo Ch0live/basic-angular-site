@@ -1,20 +1,17 @@
-@for (post of listOfPosts; track post) {
-    <!-- TODO: Adjust to only load what's actually visible using @defer -->
-    <article>
-        <h2>
-            {{ post.heading }}
-        </h2>
-        <p>
-            {{ post.body }}
-        </p>
-        <div class="img-container">
-            <img 
-            [src]="imagePath" 
-            [style]="appendedImgStyling"
-            (mouseover)="growImage()" 
-            (mouseout)="ungrowImage()"  
-            alt="Hokkaido mountain range" 
-            >
-        </div>
-    </article>
-}
+<article>
+    <p>
+        <i> {{ date }} </i>
+    </p>
+    <h2>
+        {{ heading }}
+    </h2>
+    <div class="img-container">
+        <img 
+        [src]="imagePath" 
+        [style]="appendedImgStyling"
+        (mouseover)="growImage()" 
+        (mouseout)="ungrowImage()"  
+        alt="Hokkaido mountain range" 
+        >
+    </div>
+</article>
