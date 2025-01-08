@@ -3,8 +3,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'blog-child',
   imports: [],
-  templateUrl: './child.component.html',
-  styleUrl: './child.component.css'
+  templateUrl: 'child.component.html',
+  styleUrl: 'child.component.css'
 })
 export class ChildComponent {
   @Output() incrementCountEvent = new EventEmitter<number>();

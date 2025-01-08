@@ -21,7 +21,7 @@ import { Component, computed, effect, signal, WritableSignal } from '@angular/co
       </ul>
     </div>
     `,
-  styleUrl: './muck-about-area.component.css'
+  styleUrl: 'muck-about-area.component.css'
 })
 export class MuckAboutArea {
   readonly count = signal(0)

@@ -5,8 +5,8 @@ import { posts } from '../list-of-posts.json'
 @Component({
   selector: 'blog-traditional-blog',
   imports: [RouterLink, RouterOutlet],
-  templateUrl: './traditional-blog.component.html',
-  styleUrl: './traditional-blog.component.css'
+  templateUrl: 'traditional-blog.component.html',
+  styleUrl: 'traditional-blog.component.css'
 })
 export class TraditionalBlog {
   listOfPosts = posts

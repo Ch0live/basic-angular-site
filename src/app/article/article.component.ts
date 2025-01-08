@@ -6,8 +6,8 @@ import { BlogContent } from '../traditional-blog/blog-content/blog-content.compo
 @Component({
   selector: 'blog-article',
   imports: [ImageWrapperComponent, BlogContent],
-  templateUrl: './article.component.html',
-  styleUrl: './article.component.css'
+  templateUrl: 'article.component.html',
+  styleUrl: 'article.component.css'
 })
 export class Article {
   appendedImgStyling: string = '';

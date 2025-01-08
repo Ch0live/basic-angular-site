@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'button[nextpage]',
   template: '<ng-content></ng-content>', 
-  styleUrl: './blog-button.component.css'
+  styleUrl: 'blog-button.component.css'
 })
 export class BlogButton {
   greeting: string = ""

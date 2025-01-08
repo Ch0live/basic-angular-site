@@ -8,7 +8,7 @@ import { SpacedText } from './spaced-text.pipe';
 @Component({
   selector: 'blog-image',
   imports: [NgOptimizedImage, UpperCasePipe, SpacedText],
-  templateUrl: './blog-image.component.html'
+  templateUrl: 'blog-image.component.html'
 })
 export class ImageWrapperComponent {
   src = "../../assets/hokkaido.png";
