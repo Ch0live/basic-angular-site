@@ -35,13 +35,13 @@ export const routes: Routes = [
                 component: Article
             },
             {
-                path: 'the-narrows', 
+                path: 'the-narrows-of-zion', 
                 title: 'Zion', 
                 component: Article
             },
             {
-                path: 'the-rockies',  
-                title: 'Rockies', 
+                path: 'the-red-rock-state',  
+                title: 'Colorado', 
                 component: Article
             },
         ]
