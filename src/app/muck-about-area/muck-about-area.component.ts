@@ -1,8 +1,9 @@
 import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
+import { BlogSlider } from '../blog-slider/blog-slider.component';
 
 @Component({
   selector: 'blog-muck-about-area',
-  imports: [],
+  imports: [BlogSlider],
   template: `
     <div class="main">
       <h2>Signals</h2>
@@ -19,7 +20,7 @@ import { Component, computed, effect, signal, WritableSignal } from '@angular/co
           <li>{{ log }}</li>
         }
       </ul>
-    </div>
+      <blog-slider [value]="50">
     `,
   styleUrl: 'muck-about-area.component.css'
 })

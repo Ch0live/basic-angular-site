@@ -11,7 +11,7 @@ import {Component, computed, input} from '@angular/core';
   `,
   styleUrl: 'blog-slider.component.css'
 })
-export class CustomSlider {
+export class BlogSlider {
 
   // Declare an input named 'value' with a default value of zero. 
   value = input(0);
