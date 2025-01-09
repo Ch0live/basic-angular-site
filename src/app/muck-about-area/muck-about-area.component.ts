@@ -3,7 +3,7 @@ import { BlogSlider } from '../blog-slider/blog-slider.component';
 
 @Component({
   selector: 'blog-muck-about-area',
-  imports: [BlogSlider],
+  imports: [],
   template: `
     <div class="main">
       <h2>Signals</h2>
@@ -20,7 +20,7 @@ import { BlogSlider } from '../blog-slider/blog-slider.component';
           <li>{{ log }}</li>
         }
       </ul>
-      <blog-slider [value]="50">
+      <!-- <blog-slider [value]="50"> -->
     `,
   styleUrl: 'muck-about-area.component.css'
 })

@@ -10,7 +10,7 @@ import { SpacedText } from './spaced-text.pipe';
   templateUrl: 'blog-image.component.html'
 })
 export class ImageWrapperComponent { //TODO: Turn into attribute selector
-  src = "../../assets/hokkaido.png";
-  alt = "../../assets/hokkaido.png";
+  src = "assets/images/hokkaido.png";
+  alt = "HokkaidoMountainRange";
   imageNames = "imageNames"
 }
