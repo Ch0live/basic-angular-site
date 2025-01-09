@@ -10,10 +10,6 @@
     "test:watch": "jest --watch",
     "serve:ssr:basic-blog": "node dist/basic-blog/server/server.mjs"
   },
-  "jest": {
-    "verbose": true,
-    "bail": 1
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.0",
