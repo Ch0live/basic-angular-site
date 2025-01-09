@@ -5,10 +5,10 @@ import {Component, computed, input} from '@angular/core';
   template: `
     <div>
       <p>
-        {{ value }}
+        {{ value() }}
       </p>
       <p>
-        {{ valueWithDefault }}
+        {{ valueWithDefault() }}
       </p>
     </div>
   `,
