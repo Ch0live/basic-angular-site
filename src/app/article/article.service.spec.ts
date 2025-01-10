@@ -1,20 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { ArticleService } from './article.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing'
 
 describe('ArticleService', () => {
   let service: ArticleService;
-  let httpClientSpy: jasmine.SpyObj<HttpClient>;
 
   beforeEach(() => {
-    const spy = jasmine.createSpyObj('HttpClient', ['get']);
-    TestBed.configureTestingModule(
-      {
-        providers: [ArticleService, { provide: HttpClient, useValue: spy }]
-      }
-    );
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule]
+    });
     service = TestBed.inject(ArticleService);
-    httpClientSpy = TestBed.inject(HttpClient);
   });
 
   it('should be created', () => {
