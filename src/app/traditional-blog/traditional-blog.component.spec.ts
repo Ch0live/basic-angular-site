@@ -14,7 +14,7 @@ describe('TraditionalBlog', () => {
       providers: [
         {
           provide: ActivatedRoute,
-          useValue: { snapshot: { url: ['test-route'] } } // TODO: Understand why this provider fixes our ActivatedRoute dependency
+          useValue: { snapshot: { url: ['test-route'] } } // TODO: Understand *in depth* why this provider fixes our ActivatedRoute dependency
         }
       ]
     })
@@ -47,14 +47,18 @@ describe('TraditionalBlog', () => {
     expect(blogListItems.length).toBeGreaterThan(0);
 
     const blogLinks = Array.from(blogListItems).map(item => item.querySelector('a'));
+    console.log(`links object ${blogLinks}`)
 
     const firstLink = blogLinks.find(link => link?.textContent?.includes('Cape May Beach Day'));
+    expect(firstLink).toBeDefined();
     expect(firstLink?.getAttribute('ng-reflect-router-link')).toBe('cape-may-beach-day');
 
     const secondLink = blogLinks.find(link => link?.textContent?.includes('The Narrows of Zion'));
+    expect(secondLink).toBeDefined();
     expect(secondLink?.getAttribute('ng-reflect-router-link')).toBe('the-narrows-of-zion');
 
     const thirdLink = blogLinks.find(link => link?.textContent?.includes('The Red Rock State'));
+    expect(thirdLink).toBeDefined();
     expect(thirdLink?.getAttribute('ng-reflect-router-link')).toBe('the-red-rock-state');
   });
 });

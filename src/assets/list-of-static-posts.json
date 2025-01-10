@@ -1,19 +1,31 @@
 {
-    "staticPostList": [
-      {
-        "path": "cape-may-beach-day",
-        "heading": "Cape May Beach Day",
-        "date": "20th June 2024"
+  "staticPostList": [
+    {
+      "path": "cape-may-beach-day",
+      "heading": "Cape May Beach Day",
+      "highlightImage": {
+        "path": "assets\\img\\cape-may-beach-day\\Image.png", 
+        "alt": "Wildwood Crest Beach"
       },
-      {
-        "path": "the-narrows-of-zion",
-        "heading": "The Narrows of Zion",
-        "date": "26th July 2024"
+      "date": "20th June 2024"
+    },
+    {
+      "path": "the-narrows-of-zion",
+      "heading": "The Narrows of Zion",
+      "highlightImage": {
+        "path": "assets\\img\\the-narrows-of-zion\\IMG_3473.jpeg", 
+        "alt": "Oderville Gulch in Zion National Park"
       },
-      {
-        "path": "the-red-rock-state",
-        "heading": "The Red Rock State",
-        "date": "17th July 2024"
-      }
-    ]
-  }
+      "date": "26th July 2024"
+    },
+    {
+      "path": "the-red-rock-state",
+      "heading": "The Red Rock State",
+      "highlightImage": {
+        "path": "assets\\img\\the-red-rock-state\\IMG_2724.jpeg", 
+        "alt": "An Elk in Rocky Mountain National Park"
+      },
+      "date": "17th July 2024"
+    }
+  ]
+}
