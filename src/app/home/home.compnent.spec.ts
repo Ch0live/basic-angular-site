@@ -3,15 +3,12 @@ import { Home } from './home.component';
 
 describe('Home', () => {
   let component: Home;
-  let fixture: ComponentFixture<Home>;
+    let fixture: ComponentFixture<Home>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [],
-      declarations: [Home]
+    TestBed.configureTestingModule({
+        imports: [Home]
     })
-    .compileComponents();
-
     fixture = TestBed.createComponent(Home);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -23,7 +20,7 @@ describe('Home', () => {
 
   it('should render heading', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello there');
+    expect(compiled.querySelector('h2')?.textContent).toContain('Hello there');
   });
 
   it('should render paragraph', () => {
