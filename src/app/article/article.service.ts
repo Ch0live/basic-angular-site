@@ -14,7 +14,7 @@ export class ArticleService {
     this.postsMetadata = staticPostList;
   }
 
-  getByPath(name: string) {
+  getByPath(name: string): Post {
     for (const post of this.postsMetadata) {
       if (name === post.path) {
         return post;
