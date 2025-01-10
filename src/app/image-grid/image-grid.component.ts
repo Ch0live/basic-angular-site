@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './image-grid.component.html',
   styleUrl: './image-grid.component.css'
 })
-export class ImageGrid {
-
-}
+export class ImageGrid {}
