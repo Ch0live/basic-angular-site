@@ -30,13 +30,13 @@ describe('TraditionalBlog', () => {
 
   it('should load heading and welcome paragraph', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h')?.innerHTML).toContain('Welcome!');
+    expect(compiled.querySelector('h2')?.innerHTML).toContain('Welcome!');
     expect(compiled.querySelector('p')?.innerHTML).toContain('I hope you find something you\'ll enjoy reading!');
   });
 
   it('should load a complete list of all blogs', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('ul')?.innerHTML).toContain('Cape May Beach Day');
+    expect(compiled.querySelector('ul')?.innerHTML).toContain('Cape May Beach Day'); // TODO test specific parts of the html
     expect(compiled.querySelector('ul')?.innerHTML).toContain('The Narrows in Zion');
     expect(compiled.querySelector('ul')?.innerHTML).toContain('The Red Rock State');
   });
