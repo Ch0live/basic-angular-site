@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { staticPostList } from '../content/list-of-static-posts.json';
+import { staticPostList } from '../../assets/list-of-static-posts.json';
 
 @Component({
   selector: 'blog-traditional-blog',

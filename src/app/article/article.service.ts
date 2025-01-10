@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { staticPostList } from '../content/list-of-static-posts.json';
+import { staticPostList } from '../../assets/list-of-static-posts.json';
 import { Post } from './post.type';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
