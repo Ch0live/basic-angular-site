@@ -20,17 +20,14 @@ export class Article {
   constructor() {
     this.path.set(this.activatedRoute.snapshot.url[0].path);
     this.postMetadata.set(this.articleService.getByPath(this.path()));
-    console.log(this.postMetadata());
     this.articleService.getArticle(this.path()).subscribe({
       next: (responseHtml) => {
-        console.log('HTML content fetched');
         this.postHtml.set(responseHtml);
       },
       error: (error) => {
         console.error('Error:', error);
       },
       complete: () => {
-        console.log('Article fetching complete');
       }
     });
   }

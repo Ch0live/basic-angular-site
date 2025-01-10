@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home.component';
-import { ButtonBlog } from './button-blog/button-blog.component';
 import { MuckAboutArea as MuckAboutArea } from './muck-about-area/muck-about-area.component';
 import { TraditionalBlog as TraditionalBlog } from './traditional-blog/traditional-blog.component';
 import { Article as Article } from './article/article.component';
@@ -45,10 +44,5 @@ export const routes: Routes = [
                 component: Article
             },
         ]
-    },
-    {
-        path: 'button-blog', 
-        title: 'The Button', 
-        component: ButtonBlog
     }
 ];

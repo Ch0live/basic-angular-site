@@ -1,5 +1,5 @@
 import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
-import { BlogSlider } from '../blog-slider/blog-slider.component';
+import { BlogSlider } from './blog-slider/blog-slider.component';
 
 @Component({
   selector: 'blog-muck-about-area',
