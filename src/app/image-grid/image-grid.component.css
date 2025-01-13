@@ -1,8 +1,14 @@
 .image-container {
     position: relative;
-    width: 48%;
+    width: 45%;
     height: 200px;
-    margin: 5px;
+    margin: 20px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.image-container:hover {
+    transform: scale(1.1);
 }
 
 .image-container:hover h2 {
@@ -24,4 +30,6 @@ h2 {
     top: 40%;
     left: 10%;
     right: 10%;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    transition: opacity 0.2s ease;
 }
