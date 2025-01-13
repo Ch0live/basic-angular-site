@@ -1,11 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ImageGrid } from './image-grid.component';
 import { ActivatedRoute } from '@angular/router';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import postMetadataJson from './test-post-metadata.json'
+import { PostMetadataInputWrapper } from '../article/post.type';
 
 describe('ImageGrid', () => {
-  let component: ImageGrid;
   let fixture: ComponentFixture<ImageGrid>;
 
   beforeEach(async () => {
@@ -20,8 +19,13 @@ describe('ImageGrid', () => {
     })
     .compileComponents();
 
+    // Create fixture
     fixture = TestBed.createComponent(ImageGrid);
-    fixture.autoDetectChanges();
+
+    // Bind test data to component
+    const metadataFromJson: PostMetadataInputWrapper = { metadata: postMetadataJson };
+    fixture.componentRef.setInput('postMetadata', metadataFromJson);
+    fixture.detectChanges();
   });
 
   it('should create', () => {

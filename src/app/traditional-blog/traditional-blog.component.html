@@ -6,7 +6,7 @@
 </p>
 <nav>
     <ul>
-    @for (post of listOfPosts; track post) {
+    @for (post of listOfPostMetadata; track post) {
         <li><a [routerLink]="post.path">{{ post.heading }}</a></li>
     }
     </ul>

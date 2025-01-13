@@ -1,14 +1,8 @@
-<div class="image-container"> <!-- TODO: add onclick to div overall component --> <!-- TODO: Make these random every time -->
-    <a [routerLink]="imgOne.path">
-        <img [src]="imgOne.highlightImage.path" [alt]="imgOne.highlightImage.alt"/>
-        <h2 class="articleTitle">{{imgOne.heading}}</h2>
-    </a>
-</div>
-<div class="image-container">
-    <img [src]="imgTwo.highlightImage.path" [alt]="imgTwo.highlightImage.alt"/>
-    <h2 class="articleTitle">{{imgTwo.heading}}</h2>
-</div>
-<div class="image-container">
-    <img [src]="imgThr.highlightImage.path" [alt]="imgThr.highlightImage.alt"/>
-    <h2 class="articleTitle">{{imgThr.heading}}</h2>
-</div>
+@for (metadata of postMetadata().metadata; track metadata.path) {
+    <div class="image-container"> <!-- TODO: add onclick to div overall component --> <!-- TODO: Make these random every time -->
+        <a [routerLink]="metadata.path">
+            <img [src]="metadata.highlightImage.path" [alt]="metadata.highlightImage.alt"/>
+            <h2 class="articleTitle">{{metadata.heading}}</h2>
+        </a>
+    </div>
+}

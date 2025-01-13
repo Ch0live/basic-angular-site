@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { Post as PostMetadata } from './post.type'
+import { PostMetadata as PostMetadata } from './post.type'
 import { ActivatedRoute } from '@angular/router';
 import { ArticleService as ArticleService } from './article.service';
 

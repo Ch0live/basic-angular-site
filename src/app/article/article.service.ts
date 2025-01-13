@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { staticPostList } from '../../assets/list-of-static-posts.json';
-import { Post } from './post.type';
+import postMetadataJson from '../../assets/static-post-metadata.json';
+import { PostMetadata, PostMetadataInputWrapper } from './post.type';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
 
@@ -8,13 +8,13 @@ import { catchError, Observable, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class ArticleService {
-  postsMetadata: Post[];
+  postsMetadata: PostMetadata[]
 
   constructor(private http: HttpClient) {
-    this.postsMetadata = staticPostList;
+    this.postsMetadata = postMetadataJson;
   }
 
-  getByPath(name: string): Post {
+  getByPath(name: string): PostMetadata {
     for (const post of this.postsMetadata) {
       if (name === post.path) {
         return post;

@@ -1,4 +1,4 @@
-export type Post = {
+export type PostMetadata = {
   path: string;
   date: string;
   heading: string;
@@ -6,4 +6,8 @@ export type Post = {
     path: string;
     alt: string;
   }
+}
+
+export type PostMetadataInputWrapper = {
+  metadata: PostMetadata[]
 }
