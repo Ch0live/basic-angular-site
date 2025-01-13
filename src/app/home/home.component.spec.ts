@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Home } from './home.component';
+import { ActivatedRoute } from '@angular/router';
 
 describe('Home', () => {
   let component: Home;
@@ -7,7 +8,13 @@ describe('Home', () => {
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
-        imports: [Home]
+        imports: [Home], 
+        providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: { snapshot: { url: ['test-route'] } }
+        }
+      ]
     })
     fixture = TestBed.createComponent(Home);
     component = fixture.componentInstance;

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { staticPostList } from '../../assets/list-of-static-posts.json';
 import { Post } from '../article/post.type';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'blog-image-grid',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './image-grid.component.html',
   styleUrl: './image-grid.component.css'
 })

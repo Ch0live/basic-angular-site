@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ImageGrid } from './image-grid.component';
+import { ActivatedRoute } from '@angular/router';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
 
 describe('ImageGrid', () => {
   let component: ImageGrid;
@@ -7,17 +10,22 @@ describe('ImageGrid', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImageGrid]
+      imports: [ImageGrid], 
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: { snapshot: { url: ['test-route'] } }
+        }
+      ]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(ImageGrid);
-    component = fixture.componentInstance;
     fixture.autoDetectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 
   it('should contain 3 images', () => {
@@ -37,7 +45,7 @@ describe('ImageGrid', () => {
     expect(coloradoImage.src).toBe('http://localhost/assets/img/the-red-rock-state/IMG_2724.jpeg');
   });
 
-  it('should have alt text for all images', () => {
+  it('should have alt text for all contained images', () => {
     const images = fixture.nativeElement.querySelectorAll('img');
     expect(images.length).toBe(3);
     
@@ -54,18 +62,25 @@ describe('ImageGrid', () => {
     expect(coloradoImage.alt).toBe('An Elk in Rocky Mountain National Park');
   });
 
-  it('should link to blog article', async () => {
-    const images = fixture.nativeElement.querySelectorAll('img');
+  it('should have blog title overlaid on all images', () => {
+    const images = fixture.nativeElement.querySelectorAll('h2');
     expect(images.length).toBe(3);
-
-    const capeMayImage: HTMLElement = images[0];
-    expect(capeMayImage.querySelector('h2')).toBeFalsy();
-
-    capeMayImage.dispatchEvent(new MouseEvent('onmouseover')); 
-    await fixture.whenStable(); // TODO: Check if I need this fixture.whenstable line
-
-    expect(capeMayImage.querySelector('h2')).toBe("Cape May Beach Day");
+    
+    const capeMayImage = images[0];
+    expect(capeMayImage.textContent).toBe('Cape May Beach Day');
+    
+    const zionImage = images[1];
+    expect(zionImage.textContent).toBe('The Narrows of Zion');
+    
+    const coloradoImage = images[2];
+    expect(coloradoImage.textContent).toBe('The Red Rock State');
   });
+
+  // it('should link to blog article', async () => {
+  //   const images = fixture.nativeElement.querySelectorAll('div');
+  //   expect(images.length).toBe(3);
+
+  // });
 
   // it should grow on mouseover
 
