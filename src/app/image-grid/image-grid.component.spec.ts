@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ImageGrid } from './image-grid.component';
-import { By } from '@angular/platform-browser';
 
 describe('ImageGrid', () => {
   let component: ImageGrid;

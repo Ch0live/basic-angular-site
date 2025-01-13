@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TraditionalBlog } from './traditional-blog.component';
 import { ActivatedRoute } from '@angular/router';
-import { By } from '@angular/platform-browser';
 
 describe('TraditionalBlog', () => {
   let component: TraditionalBlog;

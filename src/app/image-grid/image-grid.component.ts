@@ -9,15 +9,15 @@ import { Post } from '../article/post.type';
   styleUrl: './image-grid.component.css'
 })
 export class ImageGrid {
-  postsMetadata: Post[];
+  listOfPosts: Post[];
   imgOne: Post;
   imgTwo: Post;
   imgThr: Post;
 
   constructor() {
-    this.postsMetadata = staticPostList;
-    this.imgOne = this.postsMetadata[0];
-    this.imgTwo = this.postsMetadata[1];
-    this.imgThr = this.postsMetadata[2];
+    this.listOfPosts = staticPostList;
+    this.imgOne = this.listOfPosts[0];
+    this.imgTwo = this.listOfPosts[1];
+    this.imgThr = this.listOfPosts[2];
   }
 }
