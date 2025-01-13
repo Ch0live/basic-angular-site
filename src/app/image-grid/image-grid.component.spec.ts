@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ImageGrid } from './image-grid.component';
+import { By } from '@angular/platform-browser';
 
 describe('ImageGrid', () => {
   let component: ImageGrid;
@@ -13,7 +14,7 @@ describe('ImageGrid', () => {
 
     fixture = TestBed.createComponent(ImageGrid);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture.autoDetectChanges();
   });
 
   it('should create', () => {
@@ -21,8 +22,7 @@ describe('ImageGrid', () => {
   });
 
   it('should contain 3 images', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    const images = compiled.querySelectorAll('img');
+    const images = fixture.nativeElement.querySelectorAll('img');
     expect(images.length).toBe(3);
     
     const capeMayImage = images[0];
@@ -39,8 +39,7 @@ describe('ImageGrid', () => {
   });
 
   it('should have alt text for all images', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    const images = compiled.querySelectorAll('img');
+    const images = fixture.nativeElement.querySelectorAll('img');
     expect(images.length).toBe(3);
     
     const capeMayImage = images[0];
@@ -54,6 +53,19 @@ describe('ImageGrid', () => {
     const coloradoImage = images[2];
     expect(coloradoImage.tagName).toBe('IMG');
     expect(coloradoImage.alt).toBe('An Elk in Rocky Mountain National Park');
+  });
+
+  it('should link to blog article', async () => {
+    const images = fixture.nativeElement.querySelectorAll('img');
+    expect(images.length).toBe(3);
+
+    const capeMayImage: HTMLElement = images[0];
+    expect(capeMayImage.querySelector('h2')).toBeFalsy();
+
+    capeMayImage.dispatchEvent(new MouseEvent('onmouseover')); 
+    await fixture.whenStable(); // TODO: Check if I need this fixture.whenstable line
+
+    expect(capeMayImage.querySelector('h2')).toBe("Cape May Beach Day");
   });
 
   // it should grow on mouseover

@@ -35,7 +35,7 @@ describe('Article', () => {
 
     fixture = TestBed.createComponent(Article);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture.autoDetectChanges();
   });
 
   it('should create', () => {

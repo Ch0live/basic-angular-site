@@ -1,6 +1,27 @@
-img {
+.image-container {
+    position: relative;
     width: 48%;
     height: 200px;
-    object-fit: cover;
     margin: 5px;
+}
+
+.image-container:hover h2 {
+    display: inline;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    display: none;
+    text-align: center;
+    position: absolute;
+    margin: 0px;
+    bottom: 40%;
+    top: 40%;
+    left: 10%;
+    right: 10%;
 }

@@ -22,7 +22,7 @@ describe('TraditionalBlog', () => {
 
     fixture = TestBed.createComponent(TraditionalBlog);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture.autoDetectChanges();
   });
 
   it('should create', () => {
