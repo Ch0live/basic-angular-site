@@ -1,6 +1,6 @@
-<div class="grid">
+<div class="grid"> <!-- TODO: Misalign these like randomly layed bricks --> <!-- TODO: Make these random every time -->
     @for (metadata of postMetadata().metadata; track metadata.path) {
-        <div class="image-container"> <!-- TODO: add onclick to div overall component --> <!-- TODO: Make these random every time -->
+        <div class="image-container">
             <a [routerLink]="['/blog', metadata.path]">
                 <img [src]="metadata.highlightImage.path" [alt]="metadata.highlightImage.alt"/>
                 <h2 class="articleTitle">{{metadata.heading}}</h2>
