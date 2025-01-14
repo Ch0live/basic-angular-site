@@ -79,17 +79,4 @@ describe('ImageGrid', () => {
     const coloradoImage = images[2];
     expect(coloradoImage.textContent).toBe('The Red Rock State');
   });
-
-  // it('should link to blog article', async () => {
-  //   const images = fixture.nativeElement.querySelectorAll('div');
-  //   expect(images.length).toBe(3);
-
-  // });
-
-  // it should grow on mouseover
-
-  // it should link straight to the blog article
-
-  // it should overlay the blog title
-
 });

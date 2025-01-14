@@ -42,10 +42,6 @@ ol {
     justify-content: center;
 }
 
-img {
-    width: 80%;
-}
-
 button[nextpage] {
   background-color: #3a3a3a;
   color: white;
