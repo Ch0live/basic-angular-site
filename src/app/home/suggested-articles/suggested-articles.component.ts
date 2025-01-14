@@ -2,10 +2,11 @@ import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PostMetadata } from 'src/app/article/post.type';
 import { PostMetadataInputWrapper } from 'src/app/article/post.type';
+import { ShufflerComponent } from "./shuffler/shuffler.component";
 
 @Component({
   selector: 'blog-suggested-articles',
-  imports: [RouterLink],
+  imports: [RouterLink, ShufflerComponent],
   templateUrl: './suggested-articles.component.html',
   styleUrl: './suggested-articles.component.css'
 })

@@ -88,5 +88,7 @@ describe('SuggestedArticles', () => {
     const coloradoImage = images[2];
     expect(coloradoImage.textContent).toBe('The Red Rock State');
   });
+
+  // TODO: Add extensive testing of shuffling button logic (maybe move it all to a service?)
   
 });
