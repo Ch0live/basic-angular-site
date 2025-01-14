@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ShufflerComponent } from './shuffler.component';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
 
 describe('ShufflerComponent', () => {
   let component: ShufflerComponent;
@@ -29,15 +31,10 @@ describe('ShufflerComponent', () => {
     expect(diceImage.alt).toBe("A dice icon");
   });
 
-  it('should throw error onClick', () => {    
-    jest.spyOn(component, 'diceRoll').mockImplementation(() => {
-      throw new Error('Dice roll method not implemented');
-    });
-
-    expect(fixture.nativeElement.querySelectorAll('button')).toBeTruthy();
-    fixture.debugElement.nativeElement.querySelector('button').click();
-
-    expect(component.diceRoll).toHaveBeenCalled()
-    expect(component.diceRoll).toThrow('Dice roll method not implemented');
+  it('should onClick call diceRoll', () => {
+    jest.spyOn(component, 'diceRoll');
+    const shufflerButtonDe: DebugElement = fixture.debugElement.query(By.css('button'));
+    shufflerButtonDe.triggerEventHandler('click');
+    expect(component.diceRoll).toHaveBeenCalled();
   });
 });

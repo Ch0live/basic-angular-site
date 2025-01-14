@@ -35,11 +35,6 @@ describe('Home', () => {
     expect(compiled.querySelector('p')?.textContent).toContain('Welcome to this corner of the internet. This is a blog with some other experimental pages.');
   });
 
-  it('should render blog-shuffler', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('blog-shuffler')).toBeTruthy();
-  });
-
   it('should render blog-image-grid', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('blog-image-grid')).toBeTruthy();

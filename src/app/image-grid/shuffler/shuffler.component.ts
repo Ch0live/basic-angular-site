@@ -10,6 +10,6 @@ export class ShufflerComponent {
   diceSrc = "/assets/svg/dice/dice-frame-1.svg"
 
   diceRoll() { 
-    throw new Error('Dice unable to roll');
+    console.log("Rolling dice!");
   }
 }

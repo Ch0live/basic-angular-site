@@ -1,8 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ImageGrid } from './image-grid.component';
+import { By } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import postMetadataJson from './test-post-metadata.json'
 import { PostMetadataInputWrapper } from '../article/post.type';
+import { DebugElement } from '@angular/core';
 
 describe('ImageGrid', () => {
   let fixture: ComponentFixture<ImageGrid>;
@@ -32,8 +34,14 @@ describe('ImageGrid', () => {
     expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it('should contain 3 images', () => {
-    const images = fixture.nativeElement.querySelectorAll('img');
+  it('should render blog-shuffler', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('blog-shuffler')).toBeTruthy();
+  });
+
+  it('should render 3 images', () => {
+    const imageGridDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
+    const images = imageGridDe.nativeElement.querySelectorAll('img');;
     expect(images.length).toBe(3);
     
     const capeMayImage = images[0];
@@ -50,7 +58,8 @@ describe('ImageGrid', () => {
   });
 
   it('should have alt text for all contained images', () => {
-    const images = fixture.nativeElement.querySelectorAll('img');
+    const imageGridDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
+    const images = imageGridDe.nativeElement.querySelectorAll('img'); // TODO: Add in types here (HTMLImageElement[]), couldn't get it to work earlier
     expect(images.length).toBe(3);
     
     const capeMayImage = images[0];
@@ -79,4 +88,5 @@ describe('ImageGrid', () => {
     const coloradoImage = images[2];
     expect(coloradoImage.textContent).toBe('The Red Rock State');
   });
+  
 });
