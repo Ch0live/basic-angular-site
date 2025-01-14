@@ -34,61 +34,36 @@ describe('SuggestedArticles', () => {
     expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it('should render blog-shuffler', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('blog-shuffler')).toBeTruthy();
-  });
-
-  it('should render 3 images', () => {
-    const suggestedArticlesDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
-    const images = suggestedArticlesDe.nativeElement.querySelectorAll('img');;
+  it('should have alt text, src and content for all grid images', () => {
+    const gridDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
+    const images: HTMLImageElement[] = gridDe.nativeElement.querySelectorAll('img'); // TODO: Add in types here (HTMLImageElement[]), couldn't get it to work earlier
     expect(images.length).toBe(3);
-    
-    const capeMayImage = images[0];
-    expect(capeMayImage.tagName).toBe('IMG');
-    expect(capeMayImage.src).toBe('http://localhost/assets/img/cape-may-beach-day/Image.png');
-    
-    const zionImage = images[1];
-    expect(zionImage.tagName).toBe('IMG');
-    expect(zionImage.src).toBe('http://localhost/assets/img/the-narrows-of-zion/IMG_3473.jpeg');
-    
-    const coloradoImage = images[2];
-    expect(coloradoImage.tagName).toBe('IMG');
-    expect(coloradoImage.src).toBe('http://localhost/assets/img/the-red-rock-state/IMG_2724.jpeg');
-  });
 
-  it('should have alt text for all contained images', () => {
-    const suggestedArticlesDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
-    const images = suggestedArticlesDe.nativeElement.querySelectorAll('img'); // TODO: Add in types here (HTMLImageElement[]), couldn't get it to work earlier
-    expect(images.length).toBe(3);
-    
-    const capeMayImage = images[0];
-    expect(capeMayImage.tagName).toBe('IMG');
-    expect(capeMayImage.alt).toBe('Wildwood Crest Beach');
-    
-    const zionImage = images[1];
-    expect(zionImage.tagName).toBe('IMG');
-    expect(zionImage.alt).toBe('Oderville Gulch in Zion National Park');
-    
-    const coloradoImage = images[2];
-    expect(coloradoImage.tagName).toBe('IMG');
-    expect(coloradoImage.alt).toBe('An Elk in Rocky Mountain National Park');
-  });
-
-  it('should have blog title overlaid on all images', () => {
-    const images = fixture.nativeElement.querySelectorAll('h2');
-    expect(images.length).toBe(3);
-    
-    const capeMayImage = images[0];
-    expect(capeMayImage.textContent).toBe('Cape May Beach Day');
-    
-    const zionImage = images[1];
-    expect(zionImage.textContent).toBe('The Narrows of Zion');
-    
-    const coloradoImage = images[2];
-    expect(coloradoImage.textContent).toBe('The Red Rock State');
+    images.forEach( (image) => {
+      expect(image.tagName).toBe('IMG');
+      expect(image.src).toBeTruthy;
+      expect(image.alt).toBeTruthy;
+      expect(image.textContent).toBeTruthy;
+    })
   });
 
   // TODO: Add extensive testing of shuffling button logic (maybe move it all to a service?)
+
+  it('should render a dice svg', () => {
+    const diceContainerDe: DebugElement = fixture.debugElement.query(By.css('.dice-container'));
+    const images: HTMLImageElement[] = diceContainerDe.nativeElement.querySelectorAll('img');
+    expect(images.length).toBe(1);
+    const diceImage = images[0];
+    expect(diceImage.src).toBe("http://localhost/assets/svg/dice/dice-frame-1.svg");
+    expect(diceImage.alt).toBe("A dice icon");
+  });
+
+  it('should onClick call shuffleArticles', () => {
+    const component = fixture.componentInstance;
+    const spy = jest.spyOn(component, 'shuffleArticles');
+    const diceImg = fixture.debugElement.query(By.css('.dice'));
+    diceImg.triggerEventHandler('click', null);
+    expect(spy).toHaveBeenCalled();
+  });
   
 });

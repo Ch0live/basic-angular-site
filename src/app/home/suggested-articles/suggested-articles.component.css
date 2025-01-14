@@ -15,6 +15,21 @@
     display: inline; /* TODO: Add logic so heading shows on mobile */
 }
 
+.dice-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dice {
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.dice:hover {
+    transform: scale(1.1);
+}
+
 img {
     object-fit: cover;
     width: 100%;

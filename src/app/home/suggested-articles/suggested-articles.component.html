@@ -1,4 +1,6 @@
-<blog-shuffler (click)="shuffleArticles()"/>
+<div class="dice-container">
+    <img class="dice" [src]="diceSrc" (onclick)="shuffleArticles()" alt="A dice icon" width="50" height="50"/>
+</div>
 <div class="grid"> <!-- TODO: Misalign these like randomly layed bricks -->
     @for (metadata of featuredPostMetadata; track metadata.path) {
         <div class="image-container">

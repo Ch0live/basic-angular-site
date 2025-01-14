@@ -46,7 +46,6 @@ describe('TraditionalBlog', () => {
     expect(blogListItems.length).toBeGreaterThan(0);
 
     const blogLinks = Array.from(blogListItems).map(item => item.querySelector('a'));
-    console.log(`links object ${blogLinks}`)
 
     const firstLink = blogLinks.find(link => link?.textContent?.includes('Cape May Beach Day'));
     expect(firstLink).toBeDefined();
