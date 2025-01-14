@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ImageGrid } from './image-grid.component';
+import { SuggestedArticles } from './suggested-articles.component';
 import { By } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import postMetadataJson from './test-post-metadata.json'
-import { PostMetadataInputWrapper } from '../article/post.type';
 import { DebugElement } from '@angular/core';
+import { PostMetadataInputWrapper } from 'src/app/article/post.type';
 
-describe('ImageGrid', () => {
-  let fixture: ComponentFixture<ImageGrid>;
+describe('SuggestedArticles', () => {
+  let fixture: ComponentFixture<SuggestedArticles>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImageGrid], 
+      imports: [SuggestedArticles], 
       providers: [
         {
           provide: ActivatedRoute,
@@ -22,7 +22,7 @@ describe('ImageGrid', () => {
     .compileComponents();
 
     // Create fixture
-    fixture = TestBed.createComponent(ImageGrid);
+    fixture = TestBed.createComponent(SuggestedArticles);
 
     // Bind test data to component
     const metadataFromJson: PostMetadataInputWrapper = { metadata: postMetadataJson };
@@ -40,8 +40,8 @@ describe('ImageGrid', () => {
   });
 
   it('should render 3 images', () => {
-    const imageGridDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
-    const images = imageGridDe.nativeElement.querySelectorAll('img');;
+    const suggestedArticlesDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
+    const images = suggestedArticlesDe.nativeElement.querySelectorAll('img');;
     expect(images.length).toBe(3);
     
     const capeMayImage = images[0];
@@ -58,8 +58,8 @@ describe('ImageGrid', () => {
   });
 
   it('should have alt text for all contained images', () => {
-    const imageGridDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
-    const images = imageGridDe.nativeElement.querySelectorAll('img'); // TODO: Add in types here (HTMLImageElement[]), couldn't get it to work earlier
+    const suggestedArticlesDe: DebugElement = fixture.debugElement.query(By.css('.grid'));
+    const images = suggestedArticlesDe.nativeElement.querySelectorAll('img'); // TODO: Add in types here (HTMLImageElement[]), couldn't get it to work earlier
     expect(images.length).toBe(3);
     
     const capeMayImage = images[0];
