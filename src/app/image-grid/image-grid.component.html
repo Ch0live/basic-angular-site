@@ -1,8 +1,10 @@
-@for (metadata of postMetadata().metadata; track metadata.path) {
-    <div class="image-container"> <!-- TODO: add onclick to div overall component --> <!-- TODO: Make these random every time -->
-        <a [routerLink]="['/blog', metadata.path]">
-            <img [src]="metadata.highlightImage.path" [alt]="metadata.highlightImage.alt"/>
-            <h2 class="articleTitle">{{metadata.heading}}</h2>
-        </a>
-    </div>
-}
+<div class="grid">
+    @for (metadata of postMetadata().metadata; track metadata.path) {
+        <div class="image-container"> <!-- TODO: add onclick to div overall component --> <!-- TODO: Make these random every time -->
+            <a [routerLink]="['/blog', metadata.path]">
+                <img [src]="metadata.highlightImage.path" [alt]="metadata.highlightImage.alt"/>
+                <h2 class="articleTitle">{{metadata.heading}}</h2>
+            </a>
+        </div>
+    }
+</div>
