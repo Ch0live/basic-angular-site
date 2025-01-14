@@ -1,5 +1,5 @@
-<button (click)="shuffleArticles()">shuffle</button>
-<div class="grid"> <!-- TODO: Misalign these like randomly layed bricks --> <!-- TODO: Make these random every time -->
+<blog-shuffler (click)="shuffleArticles()"/>
+<div class="grid"> <!-- TODO: Misalign these like randomly layed bricks -->
     @for (metadata of featuredPostMetadata; track metadata.path) {
         <div class="image-container">
             <a [routerLink]="['/blog', metadata.path]">
