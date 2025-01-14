@@ -13,7 +13,7 @@ import { ShufflerComponent } from "../shuffler/shuffler.component";
       Welcome to this corner of the internet. 
       This is a blog with some other experimental pages. 
     </p>
-    <blog-shuffler />
+    <blog-shuffler /> <!-- // TODO: Move inside image grid as it's directly related and will help with logic -->
     <blog-image-grid [postMetadata]="metadataFromJson" />
   `
 })
