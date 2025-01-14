@@ -1,5 +1,3 @@
 <div class="container">
-    <button (click)="diceRoll()" style="border: none; background: transparent; padding: 0; cursor: pointer;">
-        <img [src]="diceSrc" alt="A dice icon" width="50" height="50"/>
-    </button>
+    <img [src]="diceSrc" (onclick)="diceRoll()" alt="A dice icon" width="50" height="50"/>
 </div>
