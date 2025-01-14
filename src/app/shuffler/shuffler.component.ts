@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './shuffler.component.css'
 })
 export class ShufflerComponent {
-
+  diceSrc = "/assets/svg/dice/dice-frame-1.svg"
 }

@@ -1,0 +1,9 @@
+img {
+    width: 30px;
+    filter: invert(1);
+    transition: transform 0.75s;
+}
+
+img:hover {
+    transform: rotate(360deg);
+}
