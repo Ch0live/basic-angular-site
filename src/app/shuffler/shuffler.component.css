@@ -1,5 +1,10 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 img {
-    width: 30px;
+    width: 50px;
     filter: invert(1);
     transition: transform 0.75s;
 }
