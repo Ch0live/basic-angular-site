@@ -1,4 +1,5 @@
 <blog-shuffler />
+<button (click)="shuffleArticles()">shuffle</button>
 <div class="grid"> <!-- TODO: Misalign these like randomly layed bricks --> <!-- TODO: Make these random every time -->
     @for (metadata of postMetadata().metadata; track metadata.path) {
         <div class="image-container">

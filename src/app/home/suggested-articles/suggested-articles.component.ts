@@ -10,5 +10,8 @@ import { PostMetadataInputWrapper } from 'src/app/article/post.type';
   styleUrl: './suggested-articles.component.css'
 })
 export class SuggestedArticles {
+  shuffleArticles() {
+    console.log("Shuffling");
+  }
   postMetadata = input.required<PostMetadataInputWrapper>(); // TODO: Decide if this component is worth testing anymore
 }
