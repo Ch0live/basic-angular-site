@@ -25,5 +25,311 @@
       "alt": "An Elk in Rocky Mountain National Park"
     },
     "date": "17th July 2024"
+  },
+  {
+    "path": "an-introduction-to-markdown",
+    "heading": "An Introduction to Markdown",
+    "highlightImage": {
+      "path": "assets\\img\\gruberAndMarkdownIcon.png",
+      "alt": "Gruber and markdown icon"
+    },
+    "date": "1st December 2022"
+  },
+  {
+    "path": "how-to-make-chatgpt-do-anything-you-want",
+    "heading": "How to Make ChatGPT Do Anything You Want",
+    "highlightImage": {
+      "path": "assets\\img\\completePunditBot.png",
+      "alt": "ChatGPT logo"
+    },
+    "date": "15th March 2023"
+  },
+  {
+    "path": "java-to-javascript-workflow",
+    "heading": "Java to JavaScript Workflow",
+    "highlightImage": {
+      "path": "assets\\img\\first-thousand-primes.png",
+      "alt": "JavaScript logo"
+    },
+    "date": "10th April 2023"
+  },
+  {
+    "path": "what-are-jwts-jots-json-web-tokens",
+    "heading": "What are JWTs (Jots) - JSON Web Tokens",
+    "highlightImage": {
+      "path": "assets\\img\\first-thousand-primes.png",
+      "alt": "JWT logo"
+    },
+    "date": "5th May 2023"
+  },
+  {
+    "path": "a-gamblers-paradise",
+    "heading": "A Gamblers Paradise",
+    "highlightImage": {
+      "path": "assets\\img\\a-gamblers-paradise\\IMG_3837.jpeg",
+      "alt": "The Las Vegas strip at night"
+    },
+    "date": "28th to 30th July 2024"
+  },
+  {
+    "path": "a-night-in-aomori-city",
+    "heading": "A Night in Aomori City",
+    "highlightImage": {
+      "path": "assets\\img\\a-night-in-aomori-city\\IMG_8256.jpeg",
+      "alt": "Aomori City at night"
+    },
+    "date": "15th August 2024"
+  },
+  {
+    "path": "a-peaceful-art-filled-layover",
+    "heading": "A Peaceful Art-Filled Layover",
+    "highlightImage": {
+      "path": "assets\\img\\a-peaceful-art-filled-layover\\keflavik-airport-art.png",
+      "alt": "Art gallery"
+    },
+    "date": "10th September 2024"
+  },
+  {
+    "path": "almost-the-end",
+    "heading": "Almost the End",
+    "highlightImage": {
+      "path": "assets\\img\\almost-the-end\\IMG_7575.jpeg",
+      "alt": "Sunset"
+    },
+    "date": "20th October 2024"
+  },
+  {
+    "path": "auckland",
+    "heading": "Auckland",
+    "highlightImage": {
+      "path": "assets\\img\\auckland\\IMG_5574.jpeg",
+      "alt": "Auckland skyline"
+    },
+    "date": "5th November 2024"
+  },
+  {
+    "path": "charging-and-walking",
+    "heading": "Charging and Walking",
+    "highlightImage": {
+      "path": "assets\\img\\charging-and-walking\\chargingLayout.jpg",
+      "alt": "Walking trail"
+    },
+    "date": "15th December 2024"
+  },
+  {
+    "path": "chicago-home-of-the-skyscraper",
+    "heading": "Chicago: Home of the Skyscraper",
+    "highlightImage": {
+      "path": "assets\\img\\chicago-home-of-the-skyscraper\\IMG_2069.jpeg",
+      "alt": "Chicago skyline"
+    },
+    "date": "25th January 2025"
+  },
+  {
+    "path": "coffee-art-and-old-clocks",
+    "heading": "Coffee Art and Old Clocks",
+    "highlightImage": {
+      "path": "assets\\img\\coffee-art-and-old-clocks\\IMG_4292.jpeg",
+      "alt": "Old clock"
+    },
+    "date": "5th February 2025"
+  },
+  {
+    "path": "connecticut-trails-and-mowers",
+    "heading": "Connecticut Trails and Mowers",
+    "highlightImage": {
+      "path": "assets\\img\\connecticut-trails-and-mowers\\f150-cab.png",
+      "alt": "Connecticut trail"
+    },
+    "date": "15th March 2025"
+  },
+  {
+    "path": "crowdstrike-airport-chaos",
+    "heading": "Crowdstrike Airport Chaos",
+    "highlightImage": {
+      "path": "assets\\img\\crowdstrike-airport-chaos\\IMG_2916.jpeg",
+      "alt": "Queue for Frontier helpdesk"
+    },
+    "date": "25th April 2025"
+  },
+  {
+    "path": "flashy-boston",
+    "heading": "Flashy Boston",
+    "highlightImage": {
+      "path": "assets\\img\\flashy-boston\\IMG_1650.jpeg",
+      "alt": "Boston skyline"
+    },
+    "date": "5th May 2025"
+  },
+  {
+    "path": "geysers-and-mountains",
+    "heading": "Geysers and Mountains",
+    "highlightImage": {
+      "path": "assets\\img\\geysers-and-mountains\\IMG_3181.jpeg",
+      "alt": "Geyser"
+    },
+    "date": "15th June 2025"
+  },
+  {
+    "path": "gold-coast",
+    "heading": "Gold Coast",
+    "highlightImage": {
+      "path": "assets\\img\\gold-coast\\IMG_4438.jpeg",
+      "alt": "Gold Coast beach"
+    },
+    "date": "25th July 2025"
+  },
+  {
+    "path": "hawaii-island",
+    "heading": "Hawaii Island",
+    "highlightImage": {
+      "path": "assets\\img\\hawaii-island\\IMG_7277.jpeg",
+      "alt": "Hawaii beach"
+    },
+    "date": "5th August 2025"
+  },
+  {
+    "path": "hokkaidos-capital",
+    "heading": "Hokkaido's Capital",
+    "highlightImage": {
+      "path": "assets\\img\\hokkaidos-capital\\IMG_7748.jpeg",
+      "alt": "Hokkaido cityscape"
+    },
+    "date": "15th September 2025"
+  },
+  {
+    "path": "kicking-this-all-off",
+    "heading": "Kicking This All Off",
+    "highlightImage": {
+      "path": "assets\\img\\kicking-this-all-off\\blue-valuables-bag.png",
+      "alt": "Starting point"
+    },
+    "date": "25th October 2025"
+  },
+  {
+    "path": "landing-hiking-sunday-service",
+    "heading": "Landing, Hiking, Sunday Service",
+    "highlightImage": {
+      "path": "assets\\img\\landing-hiking-sunday-service\\buzzing-powerlines.png", 
+      "alt": "Hiking trail"
+    },
+    "date": "5th November 2025"
+  },
+  {
+    "path": "last-minute-changes",
+    "heading": "Last Minute Changes",
+    "highlightImage": {
+      "path": "assets\\img\\last-minute-changes\\no-more-roller-suitcase.png",
+      "alt": "Last minute changes"
+    },
+    "date": "15th December 2025"
+  },
+  {
+    "path": "meeting-old-friends-in-new-york",
+    "heading": "Meeting Old Friends in New York",
+    "highlightImage": {
+      "path": "assets\\img\\meeting-old-friends-in-new-york\\IMG_1002.jpeg",
+      "alt": "New York skyline"
+    },
+    "date": "25th January 2026"
+  },
+  {
+    "path": "mountains-monkeys-and-temples",
+    "heading": "Mountains, Monkeys and Temples",
+    "highlightImage": {
+      "path": "assets\\img\\mountains-monkeys-and-temples\\IMG_3564.JPG",
+      "alt": "Mountain view"
+    },
+    "date": "5th February 2026"
+  },
+  {
+    "path": "new-englands-cornwall",
+    "heading": "New England's Cornwall",
+    "highlightImage": {
+      "path": "assets\\img\\new-englands-cornwall\\IMG_1777.jpeg",
+      "alt": "Cornwall view"
+    },
+    "date": "15th March 2026"
+  },
+  {
+    "path": "oahu-island",
+    "heading": "Oahu Island",
+    "highlightImage": {
+      "path": "assets\\img\\oahu-island\\IMG_7390.jpeg",
+      "alt": "Oahu beach"
+    },
+    "date": "25th April 2026"
+  },
+  {
+    "path": "ok-I-need-more-time",
+    "heading": "OK, I Need More Time",
+    "highlightImage": {
+      "path": "assets\\img\\chopping-kindling.png",
+      "alt": "Clock"
+    },
+    "date": "5th May 2026"
+  },
+  {
+    "path": "philadelphia-the-original-capital",
+    "heading": "Philadelphia: The Original Capital",
+    "highlightImage": {
+      "path": "assets\\img\\philadelphia-the-original-capital\\IMG_0910.jpeg",
+      "alt": "Statues of state representatives"
+    },
+    "date": "15th June 2026"
+  },
+  {
+    "path": "seaside-hakodate",
+    "heading": "Seaside Hakodate",
+    "highlightImage": {
+      "path": "assets\\img\\first-thousand-primes.png",
+      "alt": "Hakodate seaside"
+    },
+    "date": "25th July 2026"
+  },
+  {
+    "path": "swig",
+    "heading": "Swig",
+    "highlightImage": {
+      "path": "assets\\img\\swig\\swig-sign.jpeg",
+      "alt": "Swig drink"
+    },
+    "date": "5th August 2026"
+  },
+  {
+    "path": "the-grand-canyon-state",
+    "heading": "The Grand Canyon State",
+    "highlightImage": {
+      "path": "assets\\img\\the-grand-canyon-state\\IMG_3649.jpeg",
+      "alt": "Grand Canyon"
+    },
+    "date": "15th September 2026"
+  },
+  {
+    "path": "visiting-the-brew-crew",
+    "heading": "Visiting the Brew Crew",
+    "highlightImage": {
+      "path": "assets\\img\\visiting-the-brew-crew\\IMG_2430.jpeg",
+      "alt": "Brewery"
+    },
+    "date": "25th October 2026"
+  },
+  {
+    "path": "visiting-the-komodo-dragons",
+    "heading": "Visiting the Komodo Dragons",
+    "highlightImage": {
+      "path": "assets\\img\\visiting-the-komodo-dragons\\IMG_3418.jpeg",
+      "alt": "Komodo dragon"
+    },
+    "date": "5th November 2026"
+  },
+  {
+    "path": "washington-d-c-the-land-of-monuments",
+    "heading": "Washington D.C.: The Land of Monuments",
+    "highlightImage": {
+      "path": "assets\\img\\washington-d-c-the-land-of-monuments\\IMG_0604.jpeg",
+      "alt": "Washington D.C. monument"
+    },
+    "date": "15th December 2026"
   }
 ]

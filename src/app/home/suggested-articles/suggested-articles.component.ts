@@ -55,7 +55,7 @@ export class SuggestedArticles {
   }
 
   pickRandomThree(arr: PostMetadata[]): PostMetadata[] {
-    if (arr.length > 3) {
+    if (arr.length <= 3) {
       return this.shuffleList(arr);
     } else {
       return this.shuffleList(arr).slice(0, 3);
