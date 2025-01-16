@@ -3,12 +3,14 @@
     min-width: 45%;
     height: 200px;
     margin: 20px;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease;
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    filter: brightness(0.3);
 }
 
 .image-container:hover {
     transform: scale(1.1);
+    filter: brightness(1);
 }
 
 .image-container:hover h2 {
