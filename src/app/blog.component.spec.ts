@@ -52,7 +52,8 @@ describe('Blog', () => {
     expect(location.path()).toBe('/blog');
   });
 
-  it('All articles in static-post-metadata.json should have a working route with inj service', async () => {
+  // TODO: Figure out the errors being thrown
+  it('All articles in static-post-metadata.json should have a working route', async () => {
     var allPostsMetadata: PostMetadata[] = postMetadataJson;
     for (var postMetadata of allPostsMetadata) {
       await router.navigate(['/blog', postMetadata.path]);
@@ -60,8 +61,12 @@ describe('Blog', () => {
       
       expect(location.path()).toBe(`/blog/${postMetadata.path}`);
       fixture.detectChanges();
+
       const firstParagraph = fixture.nativeElement.querySelector('p');
       expect(firstParagraph.textContent).toContain(postMetadata.date);
+
+      const firstHeading = fixture.nativeElement.querySelector('h1');
+      expect(firstHeading.textContent).toContain(postMetadata.heading);
     }
   });
 });
