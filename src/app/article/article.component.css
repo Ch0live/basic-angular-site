@@ -1,3 +1,8 @@
 article {
     padding: 15px;
 }
+
+/* TODO: Fix images not staying in the ArticleComponent width */
+img {
+    width: 100%;
+}

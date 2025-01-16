@@ -6,25 +6,27 @@ import { Location } from '@angular/common';
 import { routes } from './blog.routes';
 import { By } from '@angular/platform-browser';
 import { Home } from './home/home.component';
-import { TraditionalBlog } from './traditional-blog/traditional-blog.component';
+import postMetadataJson from "../assets/static-post-metadata.json"
+import { PostMetadata } from './article/post.type';
+import { DebugElement } from '@angular/core';
+import { Article } from './article/article.component';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('Blog', () => {
   let router: Router;
-  let blogFixture: ComponentFixture<Blog>;
-  let homeFixture: ComponentFixture<Home>;
-  let infoFixture: ComponentFixture<Home>;
+  let fixture: ComponentFixture<Blog>;
   let location: Location;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Blog, Home, RouterTestingModule.withRoutes(routes)],
-      providers: []
+      providers: [provideHttpClient()]
     }).compileComponents();
 
     router = TestBed.inject(Router);
     location = TestBed.inject(Location);
     router.initialNavigation();
-    blogFixture = TestBed.createComponent(Blog);
+    fixture = TestBed.createComponent(Blog);
   });
 
   it('should create the app', () => {
@@ -34,25 +36,32 @@ describe('Blog', () => {
   });
 
   it('should navigate to /home by default', async () => {
-    blogFixture.detectChanges()
+    fixture.detectChanges()
     expect(location.path()).toBe('/home');
   });
 
   it('should navigate to /home when Home is clicked on navbar', async () => {
-    const allLink = blogFixture.debugElement.queryAll(By.css('a'));
+    const allLink = fixture.debugElement.queryAll(By.css('a'));
     allLink[0].nativeElement.click();
     expect(location.path()).toBe('/home');
   });
 
   it('should navigate to /blog when Blog is clicked on navbar', async () => {
-    const allLink = blogFixture.debugElement.queryAll(By.css('a'));
+    const allLink = fixture.debugElement.queryAll(By.css('a'));
     allLink[1].nativeElement.click();
     expect(location.path()).toBe('/blog');
   });
 
-  // TODO: Check all dates in static-post-metadata.json
-
-  // it('should navigate to any static blog if present', async () => {
-    
-  // });
+  it('All articles in static-post-metadata.json should have a working route with inj service', async () => {
+    var allPostsMetadata: PostMetadata[] = postMetadataJson;
+    for (var postMetadata of allPostsMetadata) {
+      await router.navigate(['/blog', postMetadata.path]);
+      await fixture.whenStable();
+      
+      expect(location.path()).toBe(`/blog/${postMetadata.path}`);
+      fixture.detectChanges();
+      const firstParagraph = fixture.nativeElement.querySelector('p');
+      expect(firstParagraph.textContent).toContain(postMetadata.date);
+    }
+  });
 });

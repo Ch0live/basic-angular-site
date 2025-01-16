@@ -1,8 +1,22 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home.component';
 import { MuckAboutArea as MuckAboutArea } from './muck-about-area/muck-about-area.component';
-import { TraditionalBlog as TraditionalBlog } from './traditional-blog/traditional-blog.component';
+import { TraditionalBlog } from './traditional-blog/traditional-blog.component';
 import { Article as Article } from './article/article.component';
+import allPostMetadata from '../assets/static-post-metadata.json'
+
+const traditionalBlogRoute = {
+    path: '', 
+    title: 'All articles', 
+    component: TraditionalBlog
+}
+
+// Create route objects for each path
+const staticBlogRoutes = allPostMetadata.map(postMetadata => ({
+  path: postMetadata.path,
+  title: postMetadata.heading, 
+  component: Article
+}));
 
 export const routes: Routes = [
     {
@@ -22,27 +36,6 @@ export const routes: Routes = [
     },
     {
         path: 'blog', 
-        children: [
-            {
-                path: '', 
-                title: 'Bl0live', 
-                component: TraditionalBlog
-            },
-            {
-                path: 'cape-may-beach-day', 
-                title: 'Cape May', 
-                component: Article
-            },
-            {
-                path: 'the-narrows-of-zion', 
-                title: 'Zion', 
-                component: Article
-            },
-            {
-                path: 'the-red-rock-state',  
-                title: 'Colorado', 
-                component: Article
-            },
-        ]
+        children: [traditionalBlogRoute,  ...staticBlogRoutes]
     }
 ];
