@@ -29,26 +29,23 @@ describe('Blog', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should navigate to /home by default', () => {
-    fixture.whenStable().then(() => {
-      expect(location.path).toBe('/home');
-    });
+  it('should navigate to /home by default', async () => {
+    await fixture.whenStable();
+    expect(location.path()).toBe('/home');
   });
 
-  it('should navigate to /home on navbar click', () => {
+  it('should navigate to /home on navbar click', async () => {
     const allLink = fixture.debugElement.queryAll(By.css('a'));
     allLink[0].nativeElement.click();
-    fixture.whenStable().then(() => {
-      expect(location.path).toBe('/home');
-    });
+    await fixture.whenStable();
+    expect(location.path()).toBe('/home');
   });
 
-  it('should navigate to /blog on navbar click', () => {
+  it('should navigate to /blog on navbar click', async () => {
     const allLink = fixture.debugElement.queryAll(By.css('a'));
     allLink[1].nativeElement.click();
-    fixture.whenStable().then(() => {
-      expect(location.path).toBe('/blogy');
-    });
+    await fixture.whenStable();
+    expect(location.path()).toBe('/blog');
   });
 
 });
