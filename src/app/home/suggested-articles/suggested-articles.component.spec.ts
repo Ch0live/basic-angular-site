@@ -47,7 +47,10 @@ describe('SuggestedArticles', () => {
     })
   });
 
-  // TODO: Add extensive testing of shuffling button logic (maybe move it all to a service?)
+  // TODO: 
+  // - Add extensive testing of shuffling button logic 
+  // - Adjust shuffle so same post doesn't reappear (until all posts have been shown...?)
+  // - Consider migrating logic to a service?
 
   it('should render a dice svg', () => {
     const diceContainerDe: DebugElement = fixture.debugElement.query(By.css('.dice-container'));

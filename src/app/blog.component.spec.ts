@@ -4,6 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { routes } from './blog.routes';
+import { By } from '@angular/platform-browser';
 
 describe('Blog', () => {
   let router: Router;
@@ -29,9 +30,24 @@ describe('Blog', () => {
   });
 
   it('should navigate to /home by default', () => {
-    fixture.detectChanges()
     fixture.whenStable().then(() => {
       expect(location.path).toBe('/home');
+    });
+  });
+
+  it('should navigate to /home on navbar click', () => {
+    const allLink = fixture.debugElement.queryAll(By.css('a'));
+    allLink[0].nativeElement.click();
+    fixture.whenStable().then(() => {
+      expect(location.path).toBe('/home');
+    });
+  });
+
+  it('should navigate to /blog on navbar click', () => {
+    const allLink = fixture.debugElement.queryAll(By.css('a'));
+    allLink[1].nativeElement.click();
+    fixture.whenStable().then(() => {
+      expect(location.path).toBe('/blogy');
     });
   });
 

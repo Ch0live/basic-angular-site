@@ -47,6 +47,6 @@ h2 {
     top: 40%;
     left: 10%;
     right: 10%;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 1);
     transition: opacity 0.2s ease;
 }
