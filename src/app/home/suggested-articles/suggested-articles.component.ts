@@ -12,28 +12,23 @@ import { PostMetadataInputWrapper } from 'src/app/article/post.type';
         'static',
         style({
           transform: 'rotate(0)'
-        }),
+        })
       ),
       state(
         'spinning',
         style({
-          transform: 'rotate(360deg)',
-          opacity: 0.5
-        }),
+          transform: 'rotate(0)'
+        })
       ),
-      transition('static <=> spinning', [animate('1s ease-in')])
-      // transition('static => spinning', [
-      //   animate(
-      //     '1s ease-in-out',
-      //     keyframes([
-      //       style({ transform: 'rotate(0deg)', offset: 0 }),
-      //       style({ transform: 'rotate(360deg)', offset: 1 }),
-      //     ])
-      //   ),
-      // ]),
-      // transition('spinning => static', [
-      //   animate('0.5s ease-out', style({ transform: 'rotate(0deg)' })),
-      // ]),
+      transition('static <=> spinning', [
+        animate(
+          '1s ease-out',
+          keyframes([
+            style({ transform: 'rotate(0deg)', offset: 0 }),
+            style({ transform: 'rotate(1080deg)', offset: 1 }), // 3 full spins
+          ])
+        ),
+      ]),
     ]),
   ],
   imports: [RouterLink],
@@ -53,7 +48,9 @@ export class SuggestedArticles {
   shuffleArticles() {
     this.diceState = this.diceState === 'static' ? 'spinning' : 'static';
     const allArticles: PostMetadata[] = this.postMetadata().metadata;
-    this.featuredPostMetadata = this.pickRandomThree(allArticles);
+    setTimeout(() => {
+      this.featuredPostMetadata = this.pickRandomThree(allArticles);
+    }, 500);
   }
 
   pickRandomThree(arr: PostMetadata[]): PostMetadata[] {
