@@ -1,10 +1,12 @@
 <div class="newspaperColumnWrapper">
     <div class="newspaperColumn">
         <article>
+            <!-- add back link at the top of the page.
+                How about "<--- postMetadata()?.date --\>" with the arrows being links?
+                Could use the .json as the source of truth on order, or just order by date-->
             <p style="margin: 4px;"><i>{{ postMetadata()?.date }}</i></p>
             <h1>{{ postMetadata()?.heading }}</h1>
             <div class="content" [innerHTML]="postHtml()"></div>
-            <!-- add link back -->
         </article>
     </div>
 </div>
