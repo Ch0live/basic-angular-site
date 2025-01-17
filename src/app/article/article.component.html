@@ -1,6 +1,6 @@
 <article>
-    <p>{{ postMetadata()?.date }}</p>
+    <p style="margin: 4px;"><i>{{ postMetadata()?.date }}</i></p>
     <h1>{{ postMetadata()?.heading }}</h1>
-    <div [innerHTML]="postHtml()"></div>
+    <div class="content" [innerHTML]="postHtml()"></div>
     <!-- add link back -->
 </article>

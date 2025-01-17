@@ -25,7 +25,7 @@ export class Article {
         this.postHtml.set(responseHtml);
       },
       error: (error) => {
-        console.error('Error:', error);
+        console.error('Error fetching article HTML:', error);
       },
       complete: () => {
       }
