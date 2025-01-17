@@ -1,9 +1,6 @@
-/* TODO: Clean up file, maybe move all to individual components */
-
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     background-color: #141414;
-    width: 55%;
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
@@ -37,9 +34,15 @@ ol {
     color: #c9c9c9;
 }
 
-.img-container {
+.newspaperColumnWrapper {
     display: flex;
     justify-content: center;
+}
+
+.newspaperColumn {
+    padding-left: 22.5%;
+    padding-right: 22.5%;
+    width: 55%;
 }
 
 img {

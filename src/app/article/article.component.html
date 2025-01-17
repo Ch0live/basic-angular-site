@@ -1,6 +1,10 @@
-<article>
-    <p style="margin: 4px;"><i>{{ postMetadata()?.date }}</i></p>
-    <h1>{{ postMetadata()?.heading }}</h1>
-    <div class="content" [innerHTML]="postHtml()"></div>
-    <!-- add link back -->
-</article>
+<div class="newspaperColumnWrapper">
+    <div class="newspaperColumn">
+        <article>
+            <p style="margin: 4px;"><i>{{ postMetadata()?.date }}</i></p>
+            <h1>{{ postMetadata()?.heading }}</h1>
+            <div class="content" [innerHTML]="postHtml()"></div>
+            <!-- add link back -->
+        </article>
+    </div>
+</div>

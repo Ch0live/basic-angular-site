@@ -7,11 +7,15 @@ import { SuggestedArticles } from "./suggested-articles/suggested-articles.compo
   selector: 'home',
   imports: [SuggestedArticles], 
   template: `
-    <h2>Hello there</h2>
-    <p>
-      Welcome to this corner of the internet. 
-      This is a blog with some other experimental pages. 
-    </p>
+  <div class="newspaperColumnWrapper">
+    <div class="newspaperColumn">
+      <h2>Hello there</h2>
+      <p>
+        Welcome to this corner of the internet. 
+        This is a blog with some other experimental pages. 
+      </p>
+    </div>
+  </div>
     <blog-suggested-articles [postMetadata]="metadataFromJson" />
   `
 })
