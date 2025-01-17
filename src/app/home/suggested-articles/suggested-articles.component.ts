@@ -17,21 +17,23 @@ import { PostMetadataInputWrapper } from 'src/app/article/post.type';
       state(
         'spinning',
         style({
-          transform: 'rotate(360deg)'
+          transform: 'rotate(360deg)',
+          opacity: 0.5
         }),
       ),
-      transition('static => spinning', [
-        animate(
-          '1s ease-in-out',
-          keyframes([
-            style({ transform: 'rotate(0deg)', offset: 0 }),
-            style({ transform: 'rotate(360deg)', offset: 1 }),
-          ])
-        ),
-      ]),
-      transition('spinning => static', [
-        animate('0.5s ease-out', style({ transform: 'rotate(0deg)' })),
-      ]),
+      transition('static <=> spinning', [animate('1s ease-in')])
+      // transition('static => spinning', [
+      //   animate(
+      //     '1s ease-in-out',
+      //     keyframes([
+      //       style({ transform: 'rotate(0deg)', offset: 0 }),
+      //       style({ transform: 'rotate(360deg)', offset: 1 }),
+      //     ])
+      //   ),
+      // ]),
+      // transition('spinning => static', [
+      //   animate('0.5s ease-out', style({ transform: 'rotate(0deg)' })),
+      // ]),
     ]),
   ],
   imports: [RouterLink],
