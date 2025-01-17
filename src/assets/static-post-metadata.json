@@ -42,16 +42,16 @@
       "path": "assets\\img\\completePunditBot.png",
       "alt": "ChatGPT logo"
     },
-    "date": "15th March 2023"
+    "date": "8th April 2024"
   },
   {
     "path": "java-to-javascript-workflow",
-    "heading": "Java to JavaScript Workflow",
+    "heading": "From Java to JavaScript; A Workflow Analysis",
     "highlightImage": {
       "path": "assets\\img\\first-thousand-primes.png",
       "alt": "JavaScript logo"
     },
-    "date": "10th April 2023"
+    "date": "13th January 2023"
   },
   {
     "path": "what-are-jwts-jots-json-web-tokens",
@@ -60,7 +60,7 @@
       "path": "assets\\img\\first-thousand-primes.png",
       "alt": "JWT logo"
     },
-    "date": "5th May 2023"
+    "date": "19th September 2023"
   },
   {
     "path": "a-gamblers-paradise",
@@ -159,7 +159,7 @@
       "path": "assets\\img\\flashy-boston\\IMG_1650.jpeg",
       "alt": "Boston skyline"
     },
-    "date": "5th May 2025"
+    "date": "25th to 27th June 2024"
   },
   {
     "path": "geysers-and-mountains",
@@ -168,7 +168,7 @@
       "path": "assets\\img\\geysers-and-mountains\\IMG_3181.jpeg",
       "alt": "Geyser"
     },
-    "date": "15th June 2025"
+    "date": "22nd to 25th July 2024"
   },
   {
     "path": "gold-coast",
@@ -177,7 +177,7 @@
       "path": "assets\\img\\gold-coast\\IMG_4438.jpeg",
       "alt": "Gold Coast beach"
     },
-    "date": "25th July 2025"
+    "date": "28th to 31st October 2024"
   },
   {
     "path": "hawaii-island",
@@ -186,7 +186,7 @@
       "path": "assets\\img\\hawaii-island\\IMG_7277.jpeg",
       "alt": "Hawaii beach"
     },
-    "date": "5th August 2025"
+    "date": "24th to 30th August 2024"
   },
   {
     "path": "hokkaidos-capital",
@@ -195,7 +195,7 @@
       "path": "assets\\img\\hokkaidos-capital\\IMG_7748.jpeg",
       "alt": "Hokkaido cityscape"
     },
-    "date": "15th September 2025"
+    "date": "5th to 9th September 2024"
   },
   {
     "path": "kicking-this-all-off",
@@ -204,7 +204,7 @@
       "path": "assets\\img\\kicking-this-all-off\\blue-valuables-bag.png",
       "alt": "Starting point"
     },
-    "date": "25th October 2025"
+    "date": "29th April 2024"
   },
   {
     "path": "landing-hiking-sunday-service",
@@ -213,7 +213,7 @@
       "path": "assets\\img\\landing-hiking-sunday-service\\buzzing-powerlines.png", 
       "alt": "Hiking trail"
     },
-    "date": "5th November 2025"
+    "date": "8th and 9th June 2024"
   },
   {
     "path": "last-minute-changes",
@@ -222,7 +222,7 @@
       "path": "assets\\img\\last-minute-changes\\no-more-roller-suitcase.png",
       "alt": "Last minute changes"
     },
-    "date": "15th December 2025"
+    "date": "7th June 2024"
   },
   {
     "path": "meeting-old-friends-in-new-york",
@@ -231,7 +231,7 @@
       "path": "assets\\img\\meeting-old-friends-in-new-york\\IMG_1002.jpeg",
       "alt": "New York skyline"
     },
-    "date": "25th January 2026"
+    "date": "20th to 25th June 2024"
   },
   {
     "path": "mountains-monkeys-and-temples",
@@ -240,7 +240,7 @@
       "path": "assets\\img\\mountains-monkeys-and-temples\\IMG_3564.JPG",
       "alt": "Mountain view"
     },
-    "date": "5th February 2026"
+    "date": "18th to 20th October"
   },
   {
     "path": "new-englands-cornwall",
@@ -249,7 +249,7 @@
       "path": "assets\\img\\new-englands-cornwall\\IMG_1777.jpeg",
       "alt": "Cornwall view"
     },
-    "date": "15th March 2026"
+    "date": "28th to 29th June 2024"
   },
   {
     "path": "oahu-island",
@@ -258,7 +258,7 @@
       "path": "assets\\img\\oahu-island\\IMG_7390.jpeg",
       "alt": "Oahu beach"
     },
-    "date": "25th April 2026"
+    "date": "31th August to 5th September 2024"
   },
   {
     "path": "ok-I-need-more-time",
@@ -267,7 +267,7 @@
       "path": "assets\\img\\chopping-kindling.png",
       "alt": "Clock"
     },
-    "date": "5th May 2026"
+    "date": "31st December 2024"
   },
   {
     "path": "philadelphia-the-original-capital",
@@ -276,7 +276,7 @@
       "path": "assets\\img\\philadelphia-the-original-capital\\IMG_0910.jpeg",
       "alt": "Statues of state representatives"
     },
-    "date": "15th June 2026"
+    "date": "18th to 20th June 2024"
   },
   {
     "path": "seaside-hakodate",
@@ -285,7 +285,7 @@
       "path": "assets\\img\\seaside-hakodate\\IMG_8018.jpeg",
       "alt": "Hakodate seaside"
     },
-    "date": "25th July 2026"
+    "date": "9th to 11th September 2024"
   },
   {
     "path": "swig",
@@ -294,7 +294,7 @@
       "path": "assets\\img\\swig\\swig-sign.jpeg",
       "alt": "Swig drink"
     },
-    "date": "5th August 2026"
+    "date": "26th July 2024"
   },
   {
     "path": "the-grand-canyon-state",
@@ -303,7 +303,7 @@
       "path": "assets\\img\\the-grand-canyon-state\\IMG_3649.jpeg",
       "alt": "Grand Canyon"
     },
-    "date": "15th September 2026"
+    "date": "26th to 27th July 2024"
   },
   {
     "path": "visiting-the-brew-crew",
@@ -312,7 +312,7 @@
       "path": "assets\\img\\visiting-the-brew-crew\\IMG_2430.jpeg",
       "alt": "Brewery"
     },
-    "date": "25th October 2026"
+    "date": "11th July 2024"
   },
   {
     "path": "visiting-the-komodo-dragons",
@@ -321,7 +321,7 @@
       "path": "assets\\img\\visiting-the-komodo-dragons\\IMG_3418.jpeg",
       "alt": "Komodo dragon"
     },
-    "date": "5th November 2026"
+    "date": "15th to 17th October 2024"
   },
   {
     "path": "washington-d-c-the-land-of-monuments",
@@ -330,6 +330,6 @@
       "path": "assets\\img\\washington-d-c-the-land-of-monuments\\IMG_0604.jpeg",
       "alt": "Washington D.C. monument"
     },
-    "date": "15th December 2026"
+    "date": "15th to 18th June 2024"
   }
 ]
