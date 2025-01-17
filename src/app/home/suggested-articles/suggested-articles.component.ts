@@ -8,27 +8,15 @@ import { PostMetadataInputWrapper } from 'src/app/article/post.type';
   selector: 'blog-suggested-articles',
   animations: [
     trigger('spinDice', [
-      state(
-        'static',
-        style({
-          transform: 'rotate(0)'
-        })
-      ),
-      state(
-        'spinning',
-        style({
-          transform: 'rotate(0)'
-        })
-      ),
-      transition('static <=> spinning', [
+      transition('static => spinning', [
         animate(
           '1s ease-out',
           keyframes([
             style({ transform: 'rotate(0deg)', offset: 0 }),
-            style({ transform: 'rotate(1080deg)', offset: 1 }), // 3 full spins
+            style({ transform: 'rotate(1080deg)', offset: 1 }),
           ])
         ),
-      ]),
+      ])
     ]),
   ],
   imports: [RouterLink],
@@ -41,16 +29,21 @@ export class SuggestedArticles {
   postMetadata = input.required<PostMetadataInputWrapper>();
   featuredPostMetadata: PostMetadata[] = [];
 
-  ngOnInit() {
-    this.shuffleArticles(); //TODO make this the only way it renders (currently reshuffles after loadiing)
+  toggleDiceState() {
+    this.diceState = this.diceState === 'static' ? 'spinning' : 'static';
   }
   
   shuffleArticles() {
-    this.diceState = this.diceState === 'static' ? 'spinning' : 'static';
-    const allArticles: PostMetadata[] = this.postMetadata().metadata;
-    setTimeout(() => {
-      this.featuredPostMetadata = this.pickRandomThree(allArticles);
-    }, 500);
+    this.toggleDiceState();
+    if(this.diceState == "spinning") {
+      const allArticles: PostMetadata[] = this.postMetadata().metadata;
+      setTimeout(() => {
+        this.featuredPostMetadata = this.pickRandomThree(allArticles);
+        if(this.diceState == "spinning") {
+          this.diceState = "static";
+        }
+      }, 1000);
+    }
   }
 
   pickRandomThree(arr: PostMetadata[]): PostMetadata[] {
