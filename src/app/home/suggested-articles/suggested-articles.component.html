@@ -1,9 +1,9 @@
-<div class="dice-container">
-    <img [@spinDice]="diceState" class="dice" [src]="diceSrc" (click)="shuffleArticles()" alt="A dice icon" width="50" height="50"/>
+<div class="dice">
+    <img [@spinDice]="diceState" [src]="diceSrc" (click)="shuffleArticles()" alt="A dice icon" width="50" height="50"/>
 </div>
-<div class="grid"> <!-- TODO: Misalign these like randomly layered bricks -->
+<div class="wall"> <!-- TODO: Misalign these like randomly layered bricks -->
     @for (metadata of featuredPostMetadata; track metadata.path) {
-        <div class="image-container">
+        <div class="brick">
             <a [routerLink]="['/blog', metadata.path]">
                 <img [src]="metadata.highlightImage.path" [alt]="metadata.highlightImage.alt"/>
                 <h2 class="articleTitle">{{metadata.heading}}</h2>

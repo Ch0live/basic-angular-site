@@ -28,17 +28,13 @@ export class SuggestedArticles {
   diceState = 'static';
   postMetadata = input.required<PostMetadataInputWrapper>();
   featuredPostMetadata: PostMetadata[] = [];
-
-  toggleDiceState() {
-    this.diceState = this.diceState === 'static' ? 'spinning' : 'static';
-  }
   
   shuffleArticles() {
-    this.toggleDiceState();
+    this.diceState = this.diceState === 'static' ? 'spinning' : 'static';
     if(this.diceState == "spinning") {
       const allArticles: PostMetadata[] = this.postMetadata().metadata;
       setTimeout(() => {
-        this.featuredPostMetadata = this.pickRandomThree(allArticles);
+        this.featuredPostMetadata = this.pickRandomTen(allArticles);
         if(this.diceState == "spinning") {
           this.diceState = "static";
         }
@@ -46,11 +42,11 @@ export class SuggestedArticles {
     }
   }
 
-  pickRandomThree(arr: PostMetadata[]): PostMetadata[] {
+  pickRandomTen(arr: PostMetadata[]): PostMetadata[] {
     if (arr.length <= 3) {
       return this.shuffleList(arr);
     } else {
-      return this.shuffleList(arr).slice(0, 3);
+      return this.shuffleList(arr).slice(0, 5);
     }
   };
 

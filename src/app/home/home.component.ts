@@ -12,11 +12,19 @@ import { SuggestedArticles } from "./suggested-articles/suggested-articles.compo
       <h2>Hello there</h2>
       <p>
         Welcome to this corner of the internet. 
-        This is a blog with some other experimental pages. 
+        This is a blog with some other experimental pages.<br><br>
+        Why not try your luck? Click the dice to load some randomly chosen articles.
       </p>
     </div>
   </div>
-    <blog-suggested-articles [postMetadata]="metadataFromJson" />
+  <blog-suggested-articles [postMetadata]="metadataFromJson" />
+  <div class="newspaperColumnWrapper">
+    <div class="newspaperColumn">
+      <p>
+        Alternatively, click Blog to see a comprehensive list of all articles.
+      </p>
+    </div>
+  </div>
   `
 })
 export class Home {

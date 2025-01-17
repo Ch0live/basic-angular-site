@@ -1,35 +1,39 @@
-.image-container {
-    position: relative;
-    min-width: 45%;
+.wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  div {
+    width: 200px;
     height: 200px;
     margin: 20px;
     transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease;
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
-    filter: brightness(0.3);
+    filter: brightness(0.75);
+  }
 }
 
-.image-container:hover {
+.brick:hover {
     transform: scale(1.1);
     filter: brightness(1);
 }
 
-.image-container:hover h2 {
-    display: inline; /* TODO: Add logic so heading shows on mobile */
-}
-
-.dice-container {
-    display: flex;
-    justify-content: center;
+.brick:hover h2 {
+    display: flex; /* TODO: Add logic so heading shows on mobile */
 }
 
 .dice {
-    width: 50px;
-    filter: invert(1);
-    cursor: pointer;
-}
-
-.dice:hover {
-    transform: scale(1.1);
+    display: flex;
+    justify-content: center;
+    img {
+        width: 50px;
+        filter: invert(1);
+        cursor: pointer;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
 }
 
 img {
@@ -41,6 +45,8 @@ img {
 h2 {
     display: none;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     margin: 0px;
     bottom: 40%;
