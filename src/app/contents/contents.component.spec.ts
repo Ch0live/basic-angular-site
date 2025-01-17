@@ -1,15 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TraditionalBlog } from './traditional-blog.component';
+import { Contents } from './contents.component';
 import { ActivatedRoute } from '@angular/router';
 
 describe('TraditionalBlog', () => {
-  let component: TraditionalBlog;
-  let fixture: ComponentFixture<TraditionalBlog>;
+  let component: Contents;
+  let fixture: ComponentFixture<Contents>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TraditionalBlog], 
+      imports: [Contents], 
       providers: [
         {
           provide: ActivatedRoute,
@@ -19,7 +19,7 @@ describe('TraditionalBlog', () => {
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TraditionalBlog);
+    fixture = TestBed.createComponent(Contents);
     component = fixture.componentInstance;
     fixture.autoDetectChanges();
   });

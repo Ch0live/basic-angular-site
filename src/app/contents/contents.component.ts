@@ -3,11 +3,11 @@ import { RouterLink } from '@angular/router';
 import postMetadata from '../../assets/static-post-metadata.json';
 
 @Component({
-  selector: 'blog-traditional-blog',
+  selector: 'blog-contents',
   imports: [RouterLink],
-  templateUrl: 'traditional-blog.component.html',
-  styleUrl: 'traditional-blog.component.css'
+  templateUrl: 'contents.component.html',
+  styleUrl: 'contents.component.css'
 })
-export class TraditionalBlog {
+export class Contents {
   listOfPostMetadata = postMetadata;
 }

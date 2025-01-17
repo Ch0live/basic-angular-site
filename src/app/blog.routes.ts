@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home.component';
 import { MuckAboutArea as MuckAboutArea } from './muck-about-area/muck-about-area.component';
-import { TraditionalBlog } from './traditional-blog/traditional-blog.component';
 import { Article as Article } from './article/article.component';
 import allPostMetadata from '../assets/static-post-metadata.json'
+import { Contents } from './contents/contents.component';
 
 const traditionalBlogRoute = {
     path: '', 
     title: 'All articles', 
-    component: TraditionalBlog
+    component: Contents
 }
 
 // Create route objects for each path
