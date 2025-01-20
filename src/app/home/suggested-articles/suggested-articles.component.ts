@@ -1,4 +1,4 @@
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { animate, keyframes, style, transition, trigger } from '@angular/animations';
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PostMetadata } from 'src/app/article/post.type';

@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './search-bar.component.css'
 })
 export class SearchBarComponent {
+  magnifyingGlassSrc = "/assets/svg/magnifying-glass.svg";
 
+  printContentOfSearch() {
+    console.log("You submitted the search!");
+  }
 }
