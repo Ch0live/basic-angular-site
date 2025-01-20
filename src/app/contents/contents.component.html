@@ -4,68 +4,74 @@
         <i>This is my blog space.<br>Writings are rambling at best.<br>I hope you enjoy.</i>
     </p>
 </div>
+<!-- TODO: Preload page elements so the UI doesn't bounce around (@preload) -->
 <div class="contents-page">
+    @defer {
+        <div>
+            <h2>
+                ​🌏🛫​ Travel
+            </h2>
+            <!-- TODO: Sort all posts by date -->
+            <p style="border: 2px solid rgb(120, 120, 120); padding: 10px" >
+                Posts will be up at the time I am somewhere or retrospectively depending on the time available to write. 
+            </p>
+            <h4>
+                In Preparation
+            </h4>
+            <h3>
+                🇺🇸🗽​ The United States
+            </h3>
+            <h4>
+                The North East
+            </h4>
+            <h4>
+                The Mid West
+            </h4>
+            <h4>
+                The West
+            </h4>
+            <h4>
+                The Pacific North West
+            </h4>
+            <h4>
+                The Central Pacific
+            </h4>
+            <h3>
+                🇯🇵​🏯​ Japan
+            </h3>
+            <p style="margin: 0%; margin-bottom: 10px;">
+                Feel free to email me if any of the Japanese (日本語) I have written can be improved!
+            </p>
+            <h4>
+                Hokkaido
+            </h4>
+            <h4>
+                Honshu
+            </h4>
+            <h3>
+                🇮🇩🛕​ Indonesia
+            </h3>
+            <h3>
+                🇦🇺🦘 Australia  
+            </h3>
+            <h3>
+                🇳🇿🌿 New Zealand
+            </h3>
+            <h3>
+                🇸🇬🦁 Singapore
+            </h3>
+            <h4>
+                In Reflection
+            </h4>
+        </div>
+    } @placeholder {
+        <div style="background-color: darkgray;"></div>
+    } 
+    @defer {
     <div>
         <h2>
             🧰🛠️​ Technical
         </h2>
-        <h2>
-            ​🌏🛫​ Travel
-        </h2>
-        <!-- TODO: Sort all posts by date -->
-        <p style="border: 2px solid rgb(120, 120, 120); padding: 10px" >
-            Posts will be up at the time I am somewhere or retrospectively depending on the time available to write. 
-        </p>
-        <h4>
-            In Preparation
-        </h4>
-        <h3>
-            🇺🇸🗽​ The United States
-        </h3>
-        <h4>
-            The North East
-        </h4>
-        <h4>
-            The Mid West
-        </h4>
-        <h4>
-            The West
-        </h4>
-        <h4>
-            The Pacific North West
-        </h4>
-        <h4>
-            The Central Pacific
-        </h4>
-        <h3>
-            🇯🇵​🏯​ Japan
-        </h3>
-        <p style="margin: 0%; margin-bottom: 10px;">
-            Feel free to email me if any of the Japanese (日本語) I have written can be improved!
-        </p>
-        <h4>
-            Hokkaido
-        </h4>
-        <h4>
-            Honshu
-        </h4>
-        <h3>
-            🇮🇩🛕​ Indonesia
-        </h3>
-        <h3>
-            🇦🇺🦘 Australia  
-        </h3>
-        <h3>
-            🇳🇿🌿 New Zealand
-        </h3>
-        <h3>
-            🇸🇬🦁 Singapore
-        </h3>
-        <h4>
-            In Reflection
-        </h4>
-    </div>
-    <div>
         <nav>
             <ul>
             @for (post of listOfPostMetadata; track post) {
@@ -74,4 +80,7 @@
             </ul>
         </nav>
     </div>
+    } @placeholder {
+        <div style="background-color: darkgray;"></div>
+    } 
 </div>
