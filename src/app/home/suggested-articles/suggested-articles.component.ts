@@ -24,11 +24,27 @@ import { PostMetadataInputWrapper } from 'src/app/article/post.type';
   styleUrl: './suggested-articles.component.css'
 })
 export class SuggestedArticles {
-  diceSrc = "/assets/svg/dice/dice-frame-1.svg";
   diceState = 'static';
   postMetadata = input.required<PostMetadataInputWrapper>();
   featuredPostMetadata: PostMetadata[] = [];
-  
+  diceSrc = "/assets/svg/dice/dice-frame-1.svg";
+  diceSrcList: string[] = [];
+
+  constructor() {
+    this.generateDiceSrcList();
+  }
+
+  generateDiceSrcList() {
+    for (let i = 1; i <= 6; i++) {
+      this.diceSrcList.push(`/assets/svg/dice/dice-frame-${i}.svg`);
+    }
+  }
+
+  changeDiceSrc() {
+    const randomIndex = Math.floor(Math.random() * this.diceSrcList.length);
+    return this.diceSrcList[randomIndex];
+  }
+
   shuffleArticles() {
     this.diceState = this.diceState === 'static' ? 'spinning' : 'static';
     if(this.diceState == "spinning") {
@@ -40,6 +56,7 @@ export class SuggestedArticles {
         }
       }, 1000);
     }
+    this.diceSrc = this.changeDiceSrc();
   }
 
   pickRandomTen(arr: PostMetadata[]): PostMetadata[] {
